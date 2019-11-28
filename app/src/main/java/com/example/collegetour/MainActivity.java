@@ -16,15 +16,18 @@ import android.view.View;
 
    */
 
-//Paint Redo all of the maps: Main, Dorms, Police/Gym, Upper campus, Lower campus
+//Paint redo all of the maps: Main, Dorms, Police/Gym, Upper campus, Lower campus
 //Erase bus stations, and pay stations from all maps --> make into buttons that can be filtered out
 //For back to main map highlight current area of map and resize map so that whole map shows
 //Make staff directory in recycler view
+//Hard code staff directory first then later try to make it work with school website
+//Make the menu section work -> look at foldable
 
 //Resize arrows so that they look nice
 //Resize specific maps so that they look nice and are usable
 //make caveman instructions more clear, human
 //make caveman speech change -> give instructions
+//make caveman speak random college tour and csulb facts
 //make set preferences screen work
 //make user homepage more usable, user can choose
 
@@ -85,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.toStaffDirectory:// handle button A click;
                 setContentView(R.layout.activity_staff_directory);
+                break;
+            case R.id.settingsGear:// handle button A click;
+                setContentView(R.layout.activity_settings);
                 break;
             default:
                 throw new RuntimeException("Unknow button ID");
