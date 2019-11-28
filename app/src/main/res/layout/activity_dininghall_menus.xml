@@ -10,12 +10,27 @@
         android:layout_height="match_parent"
         android:background="@android:color/background_light">
 
+        <EditText
+            android:id="@+id/searchBarText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="16dp"
+            android:text="search bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/backToMainMap"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
         <Button
             android:id="@+id/toMainActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClick"
-            android:text="Back"
+            android:text="Back to Home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.049"
@@ -101,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="165dp"
             android:layout_marginLeft="165dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="187dp"
             android:layout_marginRight="187dp"
             android:text="View Menu At"

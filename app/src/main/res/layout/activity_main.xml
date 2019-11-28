@@ -7,34 +7,42 @@
     android:background="@android:color/background_light"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/collegeTour"
+
+
+    <ImageView
+        android:id="@+id/cavemanGuideImage6"
+        android:layout_width="131dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="263dp"
+        android:layout_marginRight="263dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072"
+        app:srcCompat="@drawable/single_caveman_facing_right" />
+
+    <EditText
+        android:id="@+id/searchBarText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome To College Tour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
-
-    <ImageButton
-        android:id="@+id/backToMainMap"
-        android:layout_width="158dp"
-        android:layout_height="171dp"
-        android:onClick="onClick"
+        android:layout_marginTop="16dp"
+        android:text="search bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521"
-        app:srcCompat="@drawable/mapedited" />
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <Button
         android:id="@+id/toDiningMenus"
-        android:layout_width="wrap_content"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
         android:onClick="onClick"
         android:text="Menus"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,18 +50,78 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/toStaffDirectory"
-        android:layout_width="wrap_content"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
         android:onClick="onClick"
         android:text="Staff Directory/Office Hours"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
+        app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/backToMainMap"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginRight="158dp"
+        android:onClick="onClick"
+        android:text="Map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/settingsGear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007"
+        app:srcCompat="@drawable/gear" />
+    <ImageView
+        android:id="@+id/speechBubbleImage2"
+        android:layout_width="385dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/other_speech_bubble" />
+
+
+    <TextView
+        android:id="@+id/collegeTour"
+        android:layout_width="155dp"
+        android:layout_height="101dp"
+        android:text="Welcome To College Tourl be your guide"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
 </androidx.constraintlayout.widget.ConstraintLayout>
