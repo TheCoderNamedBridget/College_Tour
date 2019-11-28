@@ -7,7 +7,35 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <ImageButton
+            android:id="@+id/backToMainMap"
+            android:layout_width="95dp"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/map" />
+
+        <ImageView
+            android:id="@+id/cavemanGuideImage5"
+            android:layout_width="131dp"
+            android:layout_height="107dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="263dp"
+            android:layout_marginRight="263dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/single_caveman_facing_right" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -20,5 +48,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/uppercampus" />
+
+        <ImageButton
+            android:id="@+id/toLowerCampusFromUpperCampus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.264"
+            app:srcCompat="@drawable/up_arrow" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
