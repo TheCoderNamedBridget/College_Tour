@@ -1,4 +1,6 @@
 
+//TODO Better way to organize file, put all dates for which that cycle is ture before the meals, SUBSTRING after the dates
+
 winter cycle 1
 1/20, breakfast, [build your own omelet, oatmeal, cream of wheat, cereal, fruit/veggie juice, fresh fruit, DIY waffle, buttermilk pancakes, scrambled/hard boiled eggs, sausage patties, turkey sausage patties, potato patties, vegan sausage/eggs]
 1/20, lunch, [baked potato, tomato bisque, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, caesar salad, Chipotle lime chicken, cheese mancotti, vegetarian sopes, teriyaki beef bowl, grain bowl, assorted desserts]
@@ -40,7 +42,7 @@ winter cycle 1
 
 1/30, breakfast, [build your own omelet, oatmeal, cream of wheat, cereal, fruit/veggie juice, fresh fruit, DIY waffle, muffin sandwich, scrambled/hard boiled eggs, bacon, turkey bacon, home fries, vegan sausage/eggs]
 1/30, lunch, [chicken pozole, mediterranean lentil, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, green goddess wrap, swedish meatballs, hummus bar, shrimp po boy, chicken tinga tacos, grain bowl, assorted desserts]
-1/30, dinner, [pork pozole, broccoli cheese, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, cobb salad, grilled chicken nachos, veggie curry&tofu, Italian pork sandwich, cheese steak egg rolls, grain bowl, assorted desserts]
+1/30, dinner, [chicken pozole, broccoli cheese, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, cobb salad, grilled chicken nachos, veggie curry&tofu, Italian pork sandwich, cheese steak egg rolls, grain bowl, assorted desserts]
 
 1/31, breakfast, [build your own omelet, oatmeal, grits, cereal, fruit/veggie juice, fresh fruit, DIY waffle, biscuits&gravy, scrambled/hard boiled eggs, sausage links, turkey sausage links, tater tots, vegan sausage/eggs]
 1/31, lunch, [clam chowder, tomato floren, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, lox&bagels, truffle salmon, udon noodle bowl, hot link sandwich, carne asada huaraches, grain bowl, assorted desserts]
@@ -50,11 +52,30 @@ winter cycle 1
 2/1, lunch, [chicken wild rice, cream of broccoli, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, fruit smoothie, chicken alfredo, cheese ravioli, build your own omelet, breakfast quesadillas, DIY crepes, assorted desserts]
 2/1, dinner, [chicken wild rice, cream of broccoli, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, baby kale salad, chicken pot pie, mole tatert bowl, bean veggie burger, beef&veggie stir fry, grain bowl, assorted desserts]
 
-//TODO finish cycle 3
 //winter cycle 3
-2/3
-2/3
-2/3
+2/3, breakfast, [build your own omelet, oatmeal, cream of wheat, cereal, fruit/veggie juice, fresh fruit, DIY waffle, multigrain pancakes, scrambled/hard boiled eggs, sausage patties, turkey sausage patties, potato patties, vegan sausage/eggs]
+2/3, lunch, [corn chowder, tomato bisque, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chopped salad, chicken picatti, veggie chili cheese potato, sourdough patty melt, shrimp&veggie chow mein, grain bowl, assorted desserts]
+2/3, dinner, [corn chowder, tomato bisque, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, buffalo chicken wrap, chicken fried steak, pasta primavera, bratwurst sandwich, chicken chili flautas, grain bowl, assorted desserts]
+
+2/4, breakfast, [build your own omelet, oatmeal, grits, cereal, fruit/veggie juice, fresh fruit, DIY waffle, chorizo&eggs, scrambled/hard boiled eggs, bacon, turkey bacon, potatoes o' brien, vegan sausage/eggs]
+2/4, lunch, [albondigas, veggie french onion, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chicken wrap, beef chile, cheese ravioli, BBQ chicken flatbread, pork egg rolls, grain bowl, assorted desserts]
+2/4, dinner, [albondigas, veggie french onion, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, fruit salad, Chipotle shrimp tacos, cripsy mac&cheese, meatball sandwich, kung pow chicken, grain bowl, assorted desserts]
+
+2/5, breakfast, [build your own omelet, oatmeal, cinnamon rice, cereal, fruit/veggie juice, fresh fruit, DIY waffle, monkey bread bites, scrambled/hard boiled eggs, little smokies, turkey sausage links, hash browns, vegan sausage/eggs]
+2/5, lunch, [chicken gumbo, potato leek, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, lobster roll, cod pomodoro, mushroom risotto, pollo asada fries, beef&broccoli, grain bowl, assorted desserts]
+2/5, dinner, [chicken gumbo, potato leek, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, BBQ chicken wrap, BBQ prok ribs, chile relleno, chicken ranch panini, thai shrimp noodles, grain bowl, assorted desserts]
+
+2/6, breakfast, [build your own omelet, oatmeal, cream of wheat, cereal, fruit/veggie juice, fresh fruit, DIY waffle, chocolatechip pancakes, scrambled/hard boiled eggs, bacon, turkey bacon, home fries, vegan sausage/eggs]
+2/6, lunch, [pork pozole, tomato ravioli, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chicken wrap, glazed pork ribs, polenta&eggplant ragu, tuna sourdough melt, orange chicken, grain bowl, assorted desserts]
+2/6, dinner, [pork pozole, tomato ravioli, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, fattoush salad, chicken parmesan, butternut enchiladas, steak sandwich, pork fried rice, grain bowl, assorted desserts]
+
+2/7, breakfast, [build your own omelet, oatmeal, grits, cereal, fruit/veggie juice, fresh fruit, DIY waffle, breakfast croissant, scrambled/hard boiled eggs, sausage links, turkey sausage links, tater tots, vegan sausage/eggs]
+2/7, lunch, [clam chowder, moroccan lentil, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, ceviche tostada, glazed salmon, potato gnocchi, chicken tenders, beef fajita bowl, grain bowl, assorted desserts]
+2/7, dinner, [clam chowder, moroccan lentil, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, mustard chicken wrap, shepard's pie, grilled corn, fish sandwich, chicken bowl, grain bowl, assorted desserts]
+
+2/8, breakfast, [build your own omelet, oatmeal, cinnamon rice, cereal, fruit/veggie juice, fresh fruit, DIY waffle, french toast dippers, scrambled/hard boiled eggs, kielbasa sausage, chicken apple sausage, cottage fries, vegan sausage/eggs]
+2/8, lunch, [italian wedding, red pepper&gouda, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, fruit smoothie, beef enchiladas, build your own omelet, quusadillas, build your own crepes, assorted desserts]
+2/8, dinner, [italian wedding, red pepper&gouda, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, fruit spinach salad, penne w/sausage&peppers, cheese nachos, BBQ cheeseburger, shrimp&veggie stir fry, grain bowl, assorted desserts]
 
 //winter cycle 1
 2/10
