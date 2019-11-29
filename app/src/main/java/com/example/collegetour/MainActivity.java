@@ -1,11 +1,15 @@
 package com.example.collegetour;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -15,6 +19,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
 /*TODO: General All make all image backgrounds "light"
@@ -27,6 +36,7 @@ import java.util.Scanner;
 */
 
 //data entry of all the meals for hillside, parkside, beachside --> quick on buttons to make breakfast,lunch,dinner menus appear --> only breakfast lunch or dinner will be shown
+//make text that is shown more readable
 //make key:value map for all buildings
 //make search bar more intuitive
 //Paint redo all of the maps: Main, Dorms, Police/Gym, Upper campus, Lower campus
@@ -124,44 +134,55 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.breakfastButton:// handle button A click
                 curMeal = "breakfast";
-                //set text to breakfast options for current date
+                Button changeBreakfastButton = findViewById(R.id.breakfastButton);
+                changeBreakfastButton.setBackgroundColor(Color.GREEN);
+                Button changeLunchButton = findViewById(R.id.lunchButton);
+                changeLunchButton.setBackgroundColor(Color.LTGRAY);
+                Button changeDinnerButton = findViewById(R.id.dinnerButton);
+                changeDinnerButton.setBackgroundColor(Color.LTGRAY);
+                changeMenuOptions();
                 break;
             case R.id.lunchButton:// handle button A click;
                 curMeal = "lunch";
-                //set text to lunch options for current date
+                Button breakfastButton = findViewById(R.id.breakfastButton);
+                breakfastButton.setBackgroundColor(Color.LTGRAY);
+                Button lunchButton = findViewById(R.id.lunchButton);
+                lunchButton.setBackgroundColor(Color.GREEN);
+                Button dinnerButton = findViewById(R.id.dinnerButton);
+                dinnerButton.setBackgroundColor(Color.LTGRAY);
+                changeMenuOptions();
                 break;
             case R.id.dinnerButton:// handle button A click;
                 curMeal = "dinner";
-                //set text to dinner options for current date
-                break;
-            case R.id.alwaysThere:// handle button A click;
-                curMeal = "regular";
-                //set text to usual options for current date
+                Button breakfast = findViewById(R.id.breakfastButton);
+                breakfast.setBackgroundColor(Color.LTGRAY);
+                Button lunch = findViewById(R.id.lunchButton);
+                lunch.setBackgroundColor(Color.LTGRAY);
+                Button dinner = findViewById(R.id.dinnerButton);
+                dinner.setBackgroundColor(Color.GREEN);
+                changeMenuOptions();
                 break;
             default:
                 throw new RuntimeException("Unknow button ID");
         }
+        getCurrentTimeUsingDate();
     }
 
     //method that sets current meal options text to the text on file
     //lights up the clicked button and unlights the unselected buttons
     public void changeMenuOptions (){
+        TextView textToSet = findViewById(R.id.currentMenu);
         if (curDiningHall.equals("Hillside")){
-            if (curMeal.equals("breakfast")){
-                TextView textToSet = findViewById(R.id.currentMenu);
-                textToSet.setText(readMenuFile("Hillside Dining"));
-            } else if (curMeal.equals("lunch")){
-
-            } else if (curMeal.equals("dinner")){
-
-            }
+            textToSet.setText(readMenuFile("Hillside Dining"));
         } else if (curDiningHall.equals("Parkside")){
-
+            textToSet.setText(readMenuFile("Parkside Dining"));
         } else if (curDiningHall.equals("Beachside")){
-
+            textToSet.setText(readMenuFile("Beachside Dining"));
         }
     }
 
+
+    //reads file for a particular day and returns the values in file
     public String readMenuFile (String name){
         String menuOfCurMeal = "";
         AssetManager assetManager = getAssets();
@@ -169,15 +190,47 @@ public class MainActivity extends AppCompatActivity {
         try {
             inputStream = assetManager.open(name);
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
-            System.out.println("PLSWORK " + s.next());
-            menuOfCurMeal = menuOfCurMeal + s.nextLine();
+            System.out.println("WHY ");
+            while (s.hasNext() && menuOfCurMeal.equals("")){
+                String value = s.nextLine();
+                System.out.println("WHY " + value);
+                //TODO come back and make this part work
+                if (value.contains(curMeal) && value.contains("1/23")){//&& value.contains(getCurrentTimeUsingDate())
+                    menuOfCurMeal = menuOfCurMeal + value;
+                }
+            }
         }
         catch (IOException e){
             Log.e("message: ",e.getMessage());
         }
 
-        System.out.println(menuOfCurMeal);
+        System.out.println("PLS " + menuOfCurMeal);
         return menuOfCurMeal;
     }
 
+
+
+    public static String getCurrentTimeUsingDate() {
+        DateTimeFormatter dtf = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            dtf = DateTimeFormatter.ofPattern("MM/dd");
+        }
+        LocalDate localDate = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            localDate = LocalDate.now();
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            System.out.println(dtf.format(localDate));
+        }
+        return localDate.toString();
+    }
+
+
+//    public static void getCurrentTimeUsingCalendar() {
+//        Calendar cal = Calendar.getInstance();
+//        Date date=cal.getTime();
+//        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+//        String formattedDate=dateFormat.format(date);
+//        System.out.println("Current time of the day using Calendar - 24 hour format: "+ formattedDate);
+//    }
 }
