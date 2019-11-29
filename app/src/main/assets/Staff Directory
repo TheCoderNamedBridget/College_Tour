@@ -1,0 +1,13 @@
+
+
+
+
+//You need to show all the faculty of different departments, deans, admins, kitchen crew, everyone :D!
+//Break it down:
+//1. Identify all the departments
+//2. Find faculty in those departments
+//3. Add department headers for departments
+//4. Add admissions contact info
+//5. Add police/lockouts contact info
+//6. Add Dean info
+//7. Add kitchen staff contact info
