@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     String curMeal = "";
     ArrayList<Contact> contacts;
 
+    String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
+    String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_staff_directory);
                 // Lookup the recyclerview in activity layout
                 RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
-
                 // Initialize contacts
                 contacts = Contact.createContactsList(20);
                 // Create adapter passing in the sample user data
@@ -150,6 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.breakfastButton:// handle button A click
                 curMeal = "breakfast";
+                TextView changeBreakfastText = findViewById(R.id.hillsideStations);
+                changeBreakfastText.setText(hillsideDiningStationsBreakfast);
+
                 Button changeBreakfastButton = findViewById(R.id.breakfastButton);
                 changeBreakfastButton.setBackgroundColor(Color.GREEN);
                 Button changeLunchButton = findViewById(R.id.lunchButton);
@@ -160,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.lunchButton:// handle button A click;
                 curMeal = "lunch";
+                TextView changeLunchText = findViewById(R.id.hillsideStations);
+                changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
+
                 Button breakfastButton = findViewById(R.id.breakfastButton);
                 breakfastButton.setBackgroundColor(Color.LTGRAY);
                 Button lunchButton = findViewById(R.id.lunchButton);
@@ -170,6 +178,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.dinnerButton:// handle button A click;
                 curMeal = "dinner";
+                TextView changeDinnerText = findViewById(R.id.hillsideStations);
+                changeDinnerText.setText(hillsideDiningStationsLunchAndDinner);
+
                 Button breakfast = findViewById(R.id.breakfastButton);
                 breakfast.setBackgroundColor(Color.LTGRAY);
                 Button lunch = findViewById(R.id.lunchButton);
@@ -211,7 +222,11 @@ public class MainActivity extends AppCompatActivity {
                 String value = s.nextLine();
                 System.out.println("WHY " + value);
                 //TODO come back and make this part work
-                if (value.contains(curMeal) && value.contains("1/23")){//&& value.contains(getCurrentTimeUsingDate())
+                if (value.contains(curMeal) && value.contains("1/29")){//&& value.contains(getCurrentTimeUsingDate())
+                    value = value.substring(6);
+                    value = value.replace(",", "\r\n");
+                    value = value.replace("[", "");
+                    value = value.replace("]", "");
                     menuOfCurMeal = menuOfCurMeal + value;
                 }
             }
