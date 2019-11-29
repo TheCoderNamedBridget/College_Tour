@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     //Runs and show different screens
     public void onClick(View v) {
 
+
         switch (v.getId()) {
             case R.id.dormImageMainMapButton:// handle button A click;
                 setContentView(R.layout.activity_dorms);
@@ -139,21 +140,33 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_dininghall_menus);
                 break;
             case R.id.beachsideDining:// handle button A click;
+
                 curDiningHall = "Beachside";
                 setContentView(R.layout.activity_menu_dropdowns);
+                Button hallToSet = findViewById(R.id.hall);
+                hallToSet.setText("Beachside");
                 break;
             case R.id.hillsideDining:// handle button A click;
+
                 curDiningHall = "Hillside";
                 setContentView(R.layout.activity_menu_dropdowns);
+                Button hallToSet1 = findViewById(R.id.hall);
+                hallToSet1.setText("Hillside");
                 break;
             case R.id.parksideDining:// handle button A click;
+
                 curDiningHall = "Parkside";
                 setContentView(R.layout.activity_menu_dropdowns);
+                Button hallToSet2 = findViewById(R.id.hall);
+                hallToSet2.setText("Parkside");
                 break;
             case R.id.breakfastButton:// handle button A click
                 curMeal = "breakfast";
-                TextView changeBreakfastText = findViewById(R.id.hillsideStations);
-                changeBreakfastText.setText(hillsideDiningStationsBreakfast);
+                if (curDiningHall.equals("Hillside")){
+                    TextView changeBreakfastText = findViewById(R.id.hillsideStations);
+                    changeBreakfastText.setText(hillsideDiningStationsBreakfast);
+                }
+
 
                 Button changeBreakfastButton = findViewById(R.id.breakfastButton);
                 changeBreakfastButton.setBackgroundColor(Color.GREEN);
@@ -165,9 +178,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.lunchButton:// handle button A click;
                 curMeal = "lunch";
-                TextView changeLunchText = findViewById(R.id.hillsideStations);
-                changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
-
+                if (curDiningHall.equals("Hillside")){
+                    TextView changeLunchText = findViewById(R.id.hillsideStations);
+                    changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
+                }
                 Button breakfastButton = findViewById(R.id.breakfastButton);
                 breakfastButton.setBackgroundColor(Color.LTGRAY);
                 Button lunchButton = findViewById(R.id.lunchButton);
@@ -178,9 +192,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.dinnerButton:// handle button A click;
                 curMeal = "dinner";
-                TextView changeDinnerText = findViewById(R.id.hillsideStations);
-                changeDinnerText.setText(hillsideDiningStationsLunchAndDinner);
-
+                if (curDiningHall.equals("Hillside")){
+                    TextView changeLunchText = findViewById(R.id.hillsideStations);
+                    changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
+                }
                 Button breakfast = findViewById(R.id.breakfastButton);
                 breakfast.setBackgroundColor(Color.LTGRAY);
                 Button lunch = findViewById(R.id.lunchButton);
@@ -199,12 +214,16 @@ public class MainActivity extends AppCompatActivity {
     //lights up the clicked button and unlights the unselected buttons
     public void changeMenuOptions (){
         TextView textToSet = findViewById(R.id.currentMenu);
+
         if (curDiningHall.equals("Hillside")){
             textToSet.setText(readMenuFile("Hillside Dining"));
+
         } else if (curDiningHall.equals("Parkside")){
             textToSet.setText(readMenuFile("Parkside Dining"));
+
         } else if (curDiningHall.equals("Beachside")){
             textToSet.setText(readMenuFile("Beachside Dining"));
+
         }
     }
 
@@ -222,8 +241,8 @@ public class MainActivity extends AppCompatActivity {
                 String value = s.nextLine();
                 System.out.println("WHY " + value);
                 //TODO come back and make this part work
-                if (value.contains(curMeal) && value.contains("1/29")){//&& value.contains(getCurrentTimeUsingDate())
-                    value = value.substring(6);
+                if (value.contains(curMeal) && value.contains("3/2")){//&& value.contains(getCurrentTimeUsingDate())
+                    value = value.substring(14);
                     value = value.replace(",", "\r\n");
                     value = value.replace("[", "");
                     value = value.replace("]", "");
