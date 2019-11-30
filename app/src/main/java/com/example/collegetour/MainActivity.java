@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
     String curDiningHall = "";
     String curMeal = "";
     ArrayList<Contact> contacts;
+    ArrayList<Building> buildings = new ArrayList<>(20);
+    ArrayList<Building> buildingsWithKeywords;
+
+    String curBuilding = "";//so when using search it can just look for key words in the file under each building and return the building or buildings with keywords
 
     String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
     String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
 
 
@@ -240,13 +245,12 @@ public class MainActivity extends AppCompatActivity {
             while (s.hasNext() && menuOfCurMeal.equals("")){
                 String value = s.nextLine();
                 System.out.println("WHY " + value);
-                //TODO come back and make this part work
                 if (value.contains(curMeal) && value.contains("3/2")){//&& value.contains(getCurrentTimeUsingDate())
                     value = value.substring(14);
                     value = value.replace(",", "\r\n");
                     value = value.replace("[", "");
                     value = value.replace("]", "");
-                    menuOfCurMeal = menuOfCurMeal + value;
+                    menuOfCurMeal = menuOfCurMeal + value.toUpperCase();
                 }
             }
         }
@@ -276,6 +280,69 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+    //reads file for a building's name hours description
+    //when building is clicked this will display on the pop up
+    public void readBuildingFileAddBuildingToList (){
+        String hours = "";
+        String description = "";
+        AssetManager assetManager = getAssets();
+        InputStream inputStream = null;
+        try {
+            inputStream = assetManager.open("Building Info");
+            java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
+
+            while (s.hasNext()){
+                String value = s.nextLine();
+                if (value.contains("ISBUILDING")){
+                    curBuilding = value.substring(11);
+                    System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
+                }
+                if (value.contains("HOURS")){
+                    hours = value.substring(8);
+                    System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
+                }
+                if (value.contains("DESCRIPTION")){
+                    description = value;
+
+                }
+//                System.out.println("WHY ");
+//                System.out.println("WHY " + "[" + curBuilding +"][" + hours +"][" + description+"]");
+                if (!curBuilding.equals("") && !hours.equals("") && !description.equals("")){
+                    Building newBuilding = new Building(curBuilding,hours,description);
+//                    System.out.println("Name: 22 " + newBuilding.getName() + " Hours: " + newBuilding.getHours() + " Description: " + newBuilding.getDescription());
+                    buildings.add(newBuilding);
+//                    System.out.println("Name: 22 " + buildings.get(0).getName());
+//                    System.out.println("Name: 22 " + buildings.size());
+//                    System.out.println("Name: 22 " + curBuilding + " Hours: " + hours + " Description: " + description);
+                    curBuilding = "";
+                    hours = "";
+                    description = "";
+                }
+            }
+            System.out.println("DONE");
+        }
+        catch (IOException e){
+            Log.e("message: ",e.getMessage());
+        }
+    }
+
+    //manipulate user input
+    //parse building file
+    //find buildings with description or tags containing keywords
+    //return buildings with keyword highlighted
+    public void searchForBuilding (String userInput){
+        String keyword = userInput.toLowerCase();
+
+    }
+
+}
+
+
+
+
+
 //    public static void getCurrentTimeUsingCalendar() {
 //        Calendar cal = Calendar.getInstance();
 //        Date date=cal.getTime();
@@ -283,8 +350,3 @@ public class MainActivity extends AppCompatActivity {
 //        String formattedDate=dateFormat.format(date);
 //        System.out.println("Current time of the day using Calendar - 24 hour format: "+ formattedDate);
 //    }
-
-
-
-
-}
