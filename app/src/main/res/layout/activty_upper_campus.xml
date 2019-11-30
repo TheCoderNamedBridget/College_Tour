@@ -10,6 +10,21 @@
         android:layout_height="match_parent"
         android:background="@android:color/background_light">
 
+        <ImageView
+            android:id="@+id/cavemanGuideImage5"
+            android:layout_width="101dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="263dp"
+            android:layout_marginRight="263dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/single_caveman_facing_right" />
+
         <Button
             android:id="@+id/searchFromUpper"
             android:layout_width="70sp"
@@ -30,7 +45,7 @@
             android:id="@+id/searchBarText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="7dp"
             android:text="search bar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/backToMainMap"
@@ -47,7 +62,7 @@
             android:text="Back to Home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -66,43 +81,31 @@
             app:srcCompat="@drawable/mapedited" />
 
         <ImageView
-            android:id="@+id/cavemanGuideImage5"
-            android:layout_width="131dp"
-            android:layout_height="107dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="263dp"
-            android:layout_marginRight="263dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/single_caveman_facing_right" />
-
-        <ImageView
             android:id="@+id/imageView6"
             android:layout_width="460dp"
             android:layout_height="447dp"
-            android:layout_marginTop="268dp"
+            android:layout_marginTop="200dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/uppercampus" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/theuppercampus" />
 
         <ImageButton
             android:id="@+id/toLowerCampusFromUpperCampus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:background="@android:color/background_light"
             android:onClick="onClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.568"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.264"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/up_arrow" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
