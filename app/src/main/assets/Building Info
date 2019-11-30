@@ -5,26 +5,27 @@ Name
 Hours
 Description
 
+ISBUILDING SRWC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Gym with treadmills, ellipticals, stationary bikes, lifting machines, squat racks, basketball courts, indoor track, rock wall, pickle ball court, volleyball court, outdoor sand volleyball court and outdoor pool/hot tub. There are also rentals for bikes, surfing, climbing and camping gear.This building is wheel chair accessible]
 
-ED2
+gym treadmill treadmills elliptical ellipticals stair climber stationary bike stationary bikes
+indoor track free weights squat rack yoga yoga studio body fat percentage test scale pool hot tub
+stretching mats racquet ball punching bag elevator wheelchair accessible showers locker room locker room
+locker lockers basketball rock climbing rock wall court courts)
 
-
-EED
-
-MMC
-
+JG
 LIB
 
+
+ED2
+EED
+MMC
 AS
-
 MHB
-
 LAB
-
 TA
-
 UT
-
 UTC
 ANNEX
 FA1
@@ -105,8 +106,7 @@ DC
 UMC
 CPAC
 E5
-SRWC
-JG
+
 
 
 G1-14
