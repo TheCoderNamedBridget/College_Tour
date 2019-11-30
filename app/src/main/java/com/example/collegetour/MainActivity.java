@@ -1,6 +1,5 @@
 package com.example.collegetour;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,20 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
 
 /*TODO: General All make all image backgrounds "light"
 *  Improve overall UI -> intuitive navigation, obvious symbols(home button), correctly sized buttons and images*/
@@ -63,9 +53,11 @@ public class MainActivity extends AppCompatActivity {
     String curMeal = "";
     ArrayList<Contact> contacts;
     ArrayList<Building> buildings = new ArrayList<>(20);
-    ArrayList<Building> buildingsWithKeywords;
+    ArrayList<Building> buildingsWithKeywords = new ArrayList<>(20);
 
     String curBuilding = "";//so when using search it can just look for key words in the file under each building and return the building or buildings with keywords
+
+    String userSearchInput = "";
 
     String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
     String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
@@ -143,6 +135,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.toMenus:// handle button A click;
                 setContentView(R.layout.activity_dininghall_menus);
+                break;
+            case R.id.searchFromUpper:// handle button A click;
+                searchForBuilding(userSearchInput);
                 break;
             case R.id.beachsideDining:// handle button A click;
 
@@ -332,8 +327,41 @@ public class MainActivity extends AppCompatActivity {
     //parse building file
     //find buildings with description or tags containing keywords
     //return buildings with keyword highlighted
-    public void searchForBuilding (String userInput){
+    //TODO: Add feature if building isn't in current screen then ask if they want to search whole campus, then search whole caampus
+    //TODO: highlight building buttons that have keywords in the description
+    public void searchForBuilding (String userInput){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
+        buildingsWithKeywords.clear();
         String keyword = userInput.toLowerCase();
+        System.out.println("FOUND " + keyword);
+        AssetManager assetManager = getAssets();
+        InputStream inputStream = null;
+        try {
+            inputStream = assetManager.open("Building Info");
+            java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
+
+            while (s.hasNext()){
+                String value = s.nextLine();
+                if (value.contains("ISBUILDING")){
+                    curBuilding = value.substring(11);
+                } else if (value.contains(keyword)){
+                    if (buildingsWithKeywords.size() == 0 || (buildingsWithKeywords.size() != 0 && !(buildingsWithKeywords.get(buildingsWithKeywords.size() -1).getName()).equals(curBuilding))){
+                        buildingsWithKeywords.add(new Building(curBuilding));
+                        System.out.println("FOUND " + curBuilding);
+                    }
+
+                }
+
+            }
+            System.out.println("FOUND " + buildingsWithKeywords.size());
+            for (int i = 0;i < buildingsWithKeywords.size();i++){
+                System.out.println("FOUNDinloop " + buildingsWithKeywords.get(i).getName());
+            }
+
+            System.out.println("DONE");
+        }
+        catch (IOException e){
+            Log.e("message: ",e.getMessage());
+        }
 
     }
 
