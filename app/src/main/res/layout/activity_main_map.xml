@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/single_caveman_facing_right" />
 
         <Button
-            android:id="@+id/searchFromMainMap"
+            android:id="@+id/button"
             android:layout_width="70sp"
             android:layout_height="50sp"
             android:layout_marginStart="250dp"
@@ -41,7 +41,7 @@
             tools:text="go" />
 
         <EditText
-            android:id="@+id/searchBarText4"
+            android:id="@+id/searchBarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="160dp"
@@ -91,8 +91,8 @@
             android:id="@+id/upperCampusMainMapButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
-            android:layout_marginLeft="160dp"
+            android:layout_marginStart="163dp"
+            android:layout_marginLeft="163dp"
             android:layout_marginTop="425dp"
             android:background="@android:color/background_light"
             android:onClick="onClick"
@@ -102,7 +102,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/theuppercampus" />
+            app:srcCompat="@drawable/ttheuppercampus" />
 
         <ImageButton
             android:id="@+id/lowerCampusMainMapButton"

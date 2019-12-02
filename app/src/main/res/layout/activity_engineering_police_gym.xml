@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/single_caveman_facing_right" />
 
         <EditText
-            android:id="@+id/searchBarText3"
+            android:id="@+id/searchBarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="160dp"
