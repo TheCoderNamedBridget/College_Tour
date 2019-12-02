@@ -375,8 +375,7 @@ public class MainActivity extends AppCompatActivity {
     //parse building file
     //find buildings with description or tags containing keywords
     //return buildings with keyword highlighted
-    //TODO: Add feature if building isn't in current screen then ask if they want to search whole campus, then search whole caampus
-    //TODO: highlight building buttons that have keywords in the description
+    //TODO: Figure out how to highlight building buttons that have keywords in the description
     public void searchForBuilding (){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
         EditText input = findViewById(R.id.searchBarText);
 
