@@ -15,6 +15,8 @@ stretching mats racquet ball punching bag elevator wheelchair accessible showers
 locker lockers basketball rock climbing rock wall court courts)
 
 
+CAMPUSAREA Lower Campus
+
 ISBUILDING PYR
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
 DESCRIPTION: [Stadium for sports games, and dances]
@@ -38,6 +40,43 @@ ISBUILDING UMC
 DESCRIPTION: [Music Department?]
 
 music stuff?)
+
+ISBUILDING BAC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING KIN
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING HC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING UAM
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING HHS1
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING HHS2
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
 
 JG
 LIB
@@ -96,11 +135,7 @@ CORP
 FM
 UP
 REPR
-HHS2
-HHS1
-KIN
-HC
-UAM
+
 BH
 CBA
 FCS
@@ -120,7 +155,6 @@ F
 Hillside Office
 Hillside Dining
 PTS
-BAC
 Pyrimid Parking Structure
 PCH
 CDC
