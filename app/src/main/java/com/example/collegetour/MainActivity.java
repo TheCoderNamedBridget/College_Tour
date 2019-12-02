@@ -29,24 +29,16 @@ import java.util.ArrayList;
 *  Improve overall UI -> intuitive navigation, obvious symbols(home button), correctly sized buttons and images*/
 
 /*TODO: Urgents:
-   Learn how to make pop ups that are user interactive
    Figure out how to set up merchant account
 
 */
 
 //data entry of all the meals for hillside, parkside, beachside --> quick on buttons to make breakfast,lunch,dinner menus appear --> only breakfast lunch or dinner will be shown
-//make text that is shown more readable
 //make key:value map for all buildings
 //make search bar more intuitive
-//Paint redo all of the maps: Main, Dorms, Police/Gym, Upper campus, Lower campus
-//Erase bus stations, and pay stations from all maps --> make into buttons that can be filtered out
 //For back to main map highlight current area of map and resize map so that whole map shows
-//Make staff directory in recycler view
 //Hard code staff directory first then later try to make it work with school website
-//Make the menu section work -> look at foldable
 
-//Resize arrows so that they look nice
-//Resize specific maps so that they look nice and are usable
 //make caveman instructions more clear, human
 //make caveman speech change -> give instructions
 //make caveman speak random college tour and csulb facts
@@ -201,17 +193,35 @@ public class MainActivity extends AppCompatActivity {
                 dinner.setBackgroundColor(Color.GREEN);
                 changeMenuOptions();
                 break;
-            case R.id.PYR:// handle button A click;
+            case R.id.PYR:
                 onPop("PYR");
                 break;
-            case R.id.CPAC:// handle button A click;
+            case R.id.CPAC:
                 onPop("CPAC");
                 break;
-            case R.id.DC:// handle button A click;
+            case R.id.DC:
                 onPop("DC");
                 break;
-            case R.id.UMC:// handle button A click;
+            case R.id.UMC:
                 onPop("UMC");
+                break;
+            case R.id.BAC:
+                onPop("BAC");
+                break;
+            case R.id.KIN:
+                onPop("KIN");
+                break;
+            case R.id.HC:
+                onPop("HC");
+                break;
+            case R.id.UAM:
+                onPop("UAM");
+                break;
+            case R.id.HHS1:
+                onPop("HHS1");
+                break;
+            case R.id.HHS2:
+                onPop("HHS2");
                 break;
             default:
                 throw new RuntimeException("Unknow button ID");
