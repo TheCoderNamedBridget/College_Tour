@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Runs and show different screens
     public void onClick(View v) {
-
-
         switch (v.getId()) {
             case R.id.dormImageMainMapButton:// handle button A click;
                 setContentView(R.layout.activity_dorms);
@@ -136,18 +135,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toMenus:// handle button A click;
                 setContentView(R.layout.activity_dininghall_menus);
                 break;
-            case R.id.searchFromUpper:// handle button A click;
-                searchForBuilding(userSearchInput);
-                break;
             case R.id.beachsideDining:// handle button A click;
-
                 curDiningHall = "Beachside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet = findViewById(R.id.hall);
                 hallToSet.setText("Beachside");
                 break;
             case R.id.hillsideDining:// handle button A click;
-
                 curDiningHall = "Hillside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet1 = findViewById(R.id.hall);
@@ -166,8 +160,6 @@ public class MainActivity extends AppCompatActivity {
                     TextView changeBreakfastText = findViewById(R.id.hillsideStations);
                     changeBreakfastText.setText(hillsideDiningStationsBreakfast);
                 }
-
-
                 Button changeBreakfastButton = findViewById(R.id.breakfastButton);
                 changeBreakfastButton.setBackgroundColor(Color.GREEN);
                 Button changeLunchButton = findViewById(R.id.lunchButton);
@@ -208,6 +200,18 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException("Unknow button ID");
         }
         getCurrentTimeUsingDate();
+    }
+
+    //Shows pop up when a building is clicked
+    public void onPop (View view){
+        switch (view.getId()) {
+            case R.id.pyrButton://pyrclick
+                Toast.makeText(MainActivity.this,
+                        "Pyramid", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                throw new RuntimeException("Unknow button ID");
+        }
     }
 
     //method that sets current meal options text to the text on file
@@ -348,9 +352,7 @@ public class MainActivity extends AppCompatActivity {
                         buildingsWithKeywords.add(new Building(curBuilding));
                         System.out.println("FOUND " + curBuilding);
                     }
-
                 }
-
             }
             System.out.println("FOUND " + buildingsWithKeywords.size());
             for (int i = 0;i < buildingsWithKeywords.size();i++){
