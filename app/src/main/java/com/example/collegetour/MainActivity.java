@@ -10,12 +10,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -235,6 +232,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.JG:
                 onPop("JG");
                 break;
+            case R.id.button:
+                searchForBuilding();
+                break;
+
             default:
                 throw new RuntimeException("Unknow button ID");
         }
@@ -376,9 +377,11 @@ public class MainActivity extends AppCompatActivity {
     //return buildings with keyword highlighted
     //TODO: Add feature if building isn't in current screen then ask if they want to search whole campus, then search whole caampus
     //TODO: highlight building buttons that have keywords in the description
-    public void searchForBuilding (String userInput){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
+    public void searchForBuilding (){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
+        EditText input = findViewById(R.id.searchBarText);
+
         buildingsWithKeywords.clear();
-        String keyword = userInput.toLowerCase();
+        String keyword = input.getText().toString().toLowerCase();
         System.out.println("FOUND " + keyword);
         AssetManager assetManager = getAssets();
         InputStream inputStream = null;
@@ -393,7 +396,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (value.contains(keyword)){
                     if (buildingsWithKeywords.size() == 0 || (buildingsWithKeywords.size() != 0 && !(buildingsWithKeywords.get(buildingsWithKeywords.size() -1).getName()).equals(curBuilding))){
                         buildingsWithKeywords.add(new Building(curBuilding));
-                        System.out.println("FOUND " + curBuilding);
+                        System.out.println("FOUNDASKEW " + curBuilding);
                     }
                 }
             }
