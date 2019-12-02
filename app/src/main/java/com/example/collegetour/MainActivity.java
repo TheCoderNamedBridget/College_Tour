@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lower_campus);
+        setContentView(R.layout.activity_dorms);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -222,6 +222,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.HHS2:
                 onPop("HHS2");
+                break;
+            case R.id.RC:
+                onPop("RC");
+                break;
+            case R.id.CDC:
+                onPop("CDC");
+                break;
+            case R.id.HRL:
+                onPop("HRL");
+                break;
+            case R.id.JG:
+                onPop("JG");
                 break;
             default:
                 throw new RuntimeException("Unknow button ID");
