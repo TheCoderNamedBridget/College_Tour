@@ -77,10 +77,33 @@ DESCRIPTION: [Music Department?]
 
 music stuff?)
 
+CAMPUSAREA Dorms
 
-JG
+ISBUILDING RC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING CDC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING HRL
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
+ISBUILDING JG
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Music Department?]
+
+music stuff?)
+
 LIB
-
 
 ED2
 EED
@@ -157,11 +180,6 @@ Hillside Dining
 PTS
 Pyrimid Parking Structure
 PCH
-CDC
-HRL
-RC
-
-
 E5
 
 
