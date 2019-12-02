@@ -9,8 +9,13 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lower_campus);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -196,6 +201,18 @@ public class MainActivity extends AppCompatActivity {
                 dinner.setBackgroundColor(Color.GREEN);
                 changeMenuOptions();
                 break;
+            case R.id.PYR:// handle button A click;
+                onPop("PYR");
+                break;
+            case R.id.CPAC:// handle button A click;
+                onPop("CPAC");
+                break;
+            case R.id.DC:// handle button A click;
+                onPop("DC");
+                break;
+            case R.id.UMC:// handle button A click;
+                onPop("UMC");
+                break;
             default:
                 throw new RuntimeException("Unknow button ID");
         }
@@ -203,16 +220,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Shows pop up when a building is clicked
-    public void onPop (View view){
-        switch (view.getId()) {
-            case R.id.pyrButton://pyrclick
-                Toast.makeText(MainActivity.this,
-                        "Pyramid", Toast.LENGTH_LONG).show();
-                break;
-            default:
-                throw new RuntimeException("Unknow button ID");
+    //TODO: FIGURE OU HOW TO DO POP UPS
+    //TODO: FINISH HARD CODING BUILDING INFO
+    public void onPop (String nameOfBuilding){
+
+        for (int i = 0; i < buildings.size(); i++){
+            if (buildings.get(i).getName().equals(nameOfBuilding)){
+                Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
         }
+
     }
+
 
     //method that sets current meal options text to the text on file
     //lights up the clicked button and unlights the unselected buttons
@@ -299,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("HOURS")){
-                    hours = value.substring(8);
+                    hours = value.substring(7);
                     System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("DESCRIPTION")){
