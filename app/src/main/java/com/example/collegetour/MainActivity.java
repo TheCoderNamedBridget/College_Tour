@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,11 +58,15 @@ public class MainActivity extends AppCompatActivity {
     String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
     String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
 
+    String parksideDiningStationsBreakfast = "";
+    String parksideDiningStationsLunchAndDinner = "";
 
+    String beachsideDiningStationsBreakfast = "";
+    String beachsideDiningStationsLunchAndDinner = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dorms);
+        setContentView(R.layout.activity_main);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_main_map);
                 break;
             case R.id.toDiningMenus:// handle button A click;
-                setContentView(R.layout.activity_dininghall_menus);
+                setContentView(R.layout.activity_menu_dropdowns);
                 break;
             case R.id.toMainActivity:// handle button A click;
                 setContentView(R.layout.activity_main);
@@ -126,33 +131,77 @@ public class MainActivity extends AppCompatActivity {
             case R.id.settingsGear:// handle button A click;
                 setContentView(R.layout.activity_settings);
                 break;
-            case R.id.toMenus:// handle button A click;
-                setContentView(R.layout.activity_dininghall_menus);
-                break;
             case R.id.beachsideDining:// handle button A click;
                 curDiningHall = "Beachside";
                 setContentView(R.layout.activity_menu_dropdowns);
-                Button hallToSet = findViewById(R.id.hall);
-                hallToSet.setText("Beachside");
+                Button hallToSet = findViewById(R.id.beachsideDining);
+                hallToSet.setBackgroundColor(Color.GREEN);
+
+                Button hallToSet1 = findViewById(R.id.hillsideDining);
+                hallToSet1.setBackgroundColor(Color.LTGRAY);
+
+                Button hallToSet2 = findViewById(R.id.parksideDining);
+                hallToSet2.setBackgroundColor(Color.LTGRAY);
+
+                Button breakfastButton3 = findViewById(R.id.breakfastButton);
+                breakfastButton3.setVisibility(View.VISIBLE);
+
+                Button lunchButton3 = findViewById(R.id.lunchButton);
+                lunchButton3.setVisibility(View.VISIBLE);
+
+                Button dinnerButton3 = findViewById(R.id.dinnerButton);
+                dinnerButton3.setVisibility(View.VISIBLE);
                 break;
             case R.id.hillsideDining:// handle button A click;
+                System.out.println("HERE " + curDiningHall);
                 curDiningHall = "Hillside";
                 setContentView(R.layout.activity_menu_dropdowns);
-                Button hallToSet1 = findViewById(R.id.hall);
-                hallToSet1.setText("Hillside");
+                Button hallToSet3 = findViewById(R.id.hillsideDining);
+                hallToSet3.setBackgroundColor(Color.GREEN);
+                Button hallToSet4 = findViewById(R.id.parksideDining);
+                hallToSet4.setBackgroundColor(Color.LTGRAY);
+                Button hallToSet5 = findViewById(R.id.beachsideDining);
+                hallToSet5.setBackgroundColor(Color.LTGRAY);
+
+                Button breakfastButton1 = findViewById(R.id.breakfastButton);
+                breakfastButton1.setVisibility(View.VISIBLE);
+
+                Button lunchButton1 = findViewById(R.id.lunchButton);
+                lunchButton1.setVisibility(View.VISIBLE);
+
+                Button dinnerButton1 = findViewById(R.id.dinnerButton);
+                dinnerButton1.setVisibility(View.VISIBLE);
                 break;
             case R.id.parksideDining:// handle button A click;
-
                 curDiningHall = "Parkside";
                 setContentView(R.layout.activity_menu_dropdowns);
-                Button hallToSet2 = findViewById(R.id.hall);
-                hallToSet2.setText("Parkside");
+                Button hallToSet6 = findViewById(R.id.parksideDining);
+                hallToSet6.setBackgroundColor(Color.GREEN);
+                Button hallToSet7 = findViewById(R.id.hillsideDining);
+                hallToSet7.setBackgroundColor(Color.LTGRAY);
+                Button hallToSet8 = findViewById(R.id.beachsideDining);
+                hallToSet8.setBackgroundColor(Color.LTGRAY);
+
+                Button breakfastButton2 = findViewById(R.id.breakfastButton);
+                breakfastButton2.setVisibility(View.VISIBLE);
+
+                Button lunchButton2 = findViewById(R.id.lunchButton);
+                lunchButton2.setVisibility(View.VISIBLE);
+
+                Button dinnerButton2 = findViewById(R.id.dinnerButton);
+                dinnerButton2.setVisibility(View.VISIBLE);
                 break;
             case R.id.breakfastButton:// handle button A click
                 curMeal = "breakfast";
                 if (curDiningHall.equals("Hillside")){
-                    TextView changeBreakfastText = findViewById(R.id.hillsideStations);
+                    TextView changeBreakfastText = findViewById(R.id.stations);
                     changeBreakfastText.setText(hillsideDiningStationsBreakfast);
+                } else if (curDiningHall.equals("Parkside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(parksideDiningStationsBreakfast);
+                } else if (curDiningHall.equals("Beachside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(beachsideDiningStationsBreakfast);
                 }
                 Button changeBreakfastButton = findViewById(R.id.breakfastButton);
                 changeBreakfastButton.setBackgroundColor(Color.GREEN);
@@ -165,8 +214,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.lunchButton:// handle button A click;
                 curMeal = "lunch";
                 if (curDiningHall.equals("Hillside")){
-                    TextView changeLunchText = findViewById(R.id.hillsideStations);
-                    changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(hillsideDiningStationsLunchAndDinner);
+                } else if (curDiningHall.equals("Parkside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(parksideDiningStationsLunchAndDinner);
+                } else if (curDiningHall.equals("Beachside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(beachsideDiningStationsLunchAndDinner);
                 }
                 Button breakfastButton = findViewById(R.id.breakfastButton);
                 breakfastButton.setBackgroundColor(Color.LTGRAY);
@@ -179,8 +234,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.dinnerButton:// handle button A click;
                 curMeal = "dinner";
                 if (curDiningHall.equals("Hillside")){
-                    TextView changeLunchText = findViewById(R.id.hillsideStations);
-                    changeLunchText.setText(hillsideDiningStationsLunchAndDinner);
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(hillsideDiningStationsLunchAndDinner);
+                } else if (curDiningHall.equals("Parkside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(parksideDiningStationsLunchAndDinner);
+                } else if (curDiningHall.equals("Beachside")){
+                    TextView changeBreakfastText = findViewById(R.id.stations);
+                    changeBreakfastText.setText(beachsideDiningStationsLunchAndDinner);
                 }
                 Button breakfast = findViewById(R.id.breakfastButton);
                 breakfast.setBackgroundColor(Color.LTGRAY);
@@ -409,12 +470,9 @@ public class MainActivity extends AppCompatActivity {
         catch (IOException e){
             Log.e("message: ",e.getMessage());
         }
-
     }
 
 }
-
-
 
 
 
