@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
     String parksideDiningStationsBreakfast = "";
     String parksideDiningStationsLunchAndDinner = "";
 
-    String beachsideDiningStationsBreakfast = "";
-    String beachsideDiningStationsLunchAndDinner = "";
+    String beachsideDiningStationsBreakfast = "Hot Cereal:\r\nHome:\r\nHome:\r\nHome:\r\nHome:";
+    String beachsideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nDeli(entree):\r\nAt Home:\r\nThe Bar:\r\nGrill:\r\nDeli:\r\nPizza:\r\nSweets:";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
