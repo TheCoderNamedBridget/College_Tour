@@ -13,7 +13,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     String curDiningHall = "";
     String curMeal = "";
-    ArrayList<Contact> contacts;
+    ArrayList<Contact> contacts; // will the the list created of staff
     ArrayList<Building> buildings = new ArrayList<>(20);
     ArrayList<Building> buildingsWithKeywords = new ArrayList<>(20);
 
@@ -119,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 // Lookup the recyclerview in activity layout
                 RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
                 // Initialize contacts
-                contacts = Contact.createContactsList(20);
+                contacts = Contact.createContactsList(20);//TODO COME BACK HERE AND READ STAFF NAMES FROM FILE
                 // Create adapter passing in the sample user data
                 ContactsAdapter adapter = new ContactsAdapter(contacts);
                 // Attach the adapter to the recyclerview to populate items
@@ -293,10 +292,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.JG:
                 onPop("JG");
                 break;
-            case R.id.button:
+            case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
-
+            case R.id.searchForStaff:
+                searchForStaff();
+                break;
             default:
                 throw new RuntimeException("Unknow button ID");
         }
@@ -354,7 +355,7 @@ public class MainActivity extends AppCompatActivity {
                     value = value.replace(",", "\r\n");
                     value = value.replace("[", "");
                     value = value.replace("]", "");
-                    menuOfCurMeal = menuOfCurMeal + value.toUpperCase();
+                    menuOfCurMeal = menuOfCurMeal + value;
                 }
             }
         }
@@ -470,6 +471,17 @@ public class MainActivity extends AppCompatActivity {
         catch (IOException e){
             Log.e("message: ",e.getMessage());
         }
+    }
+
+
+    //Creates the list of staff names and emails from the staff file
+    public void readStaffFileAddStaffToList(){
+
+    }
+    //parse staff list
+    //scroll recycler view to searched staff
+    public void searchForStaff (){
+
     }
 
 }
