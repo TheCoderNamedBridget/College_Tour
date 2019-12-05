@@ -27,18 +27,13 @@ import java.util.ArrayList;
 
 /*TODO: Urgents:
    Figure out how to set up merchant account
-
 */
 
-//data entry of all the meals for hillside, parkside, beachside --> quick on buttons to make breakfast,lunch,dinner menus appear --> only breakfast lunch or dinner will be shown
-//make key:value map for all buildings
+//data entry of all the meals for parkside
 //make search bar more intuitive
 //For back to main map highlight current area of map and resize map so that whole map shows
 //Hard code staff directory first then later try to make it work with school website
 
-//make caveman instructions more clear, human
-//make caveman speech change -> give instructions
-//make caveman speak random college tour and csulb facts
 //make set preferences screen work
 //make user homepage more usable, user can choose
 
@@ -57,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
     String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
     String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
 
-    String parksideDiningStationsBreakfast = "";
-    String parksideDiningStationsLunchAndDinner = "";
+    String parksideDiningStationsBreakfast = "Breakfast Bar:";
+    String parksideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nAction Station:\r\nMain Dish:\r\nVeggie/Vegan:\r\nGrill:\r\nGrill:\r\nDeli:\r\nPizza:\r\nChef Table:\r\nSweets:";
 
     String beachsideDiningStationsBreakfast = "Hot Cereal:\r\nHome:\r\nHome:\r\nHome:\r\nHome:";
     String beachsideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nDeli(entree):\r\nAt Home:\r\nThe Bar:\r\nGrill:\r\nDeli:\r\nPizza:\r\nSweets:";
