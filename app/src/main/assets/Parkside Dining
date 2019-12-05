@@ -1,58 +1,59 @@
 
-//Breakfastdone
-//TODO Change to match parkside menu
-//TODO finish lunch and dinner menus
+
 winter cycle 1
 1/20,2/10,3/2 breakfast, [omelet bar, oatmeal, cream of rice, local fruits, pancakes, scrambled eggs, pork sausage, cottage fries]
 1/20,2/10,3/2 lunch, [minestroni, broccoli cheese, salad bar, chipotle salad, spicy pork ramen, tahini bowl, ham&turkey burger, sandwich, sausage&mushroom, chef's choice, desserts]
 1/20,2/10,3/2 dinner, [minestroni, broccoli cheese, salad bar, apple nut salad, beef tri tip, gardien chicken, pasta arrabbiata, sandwich, sausage&mushroom, chef's choice, desserts]
 
 1/21,2/11,3/3 breakfast, [omelet bar, oatmeal, grits, local fruits, biscuits&gravy, scrambled eggs, sausage patties, hash browns]
-1/21,2/11,3/3 lunch, [ravioli soup, miso soup
-1/21,2/11,3/3 dinner, [caldo de Rez, cream of asparagus, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, chef salad, chicken tikka masala, baked eg
+1/21,2/11,3/3 lunch, [ravioli soup, miso soup, salad bar, kale&quinoa, chicken bowl, squash tart, meatball sub, sandwich, buffalo chicken, chef's choice]
+1/21,2/11,3/3 dinner, [ravioli soup, miso soup, salad bar, beef baguette, meat lasagna, garbanzo stew, chicken taquitos, sandwich, buffalo chicken, chef's choice]
 
 1/22,2/12,3/4 breakfast, [omelet bar, oatmeal, sweet rice, local fruits, egg burrito, scrambled eggs, chorizo, colorful potatoes]
-1/22,2/12,3/4 lunch, [chicken noodle, roasted tomato, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, muffaletta sub sandwich, pork chile verde, butternut squash mac and
-1/22,2/12,3/4 dinner, [chicken noodle, roasted tomato, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, chicken caesar salad wrap, caribbean flank steak, crispy egg
+1/22,2/12,3/4 lunch, [beef barley, corn chowder, salad bar, greek salad, swiss pasta, spicy tofu bowl, chicken sandwich, sandwich, hawaiian, chef's choice, desserts]
+1/22,2/12,3/4 dinner, [beef barley, corn chowder, salad bar, hummus bar, spinach tortellini, lentil tacos, chicken sandwich, sandwich, hawaiian, chef's choice, desserts]
 
 1/23,2/13,3/5 breakfast, [omelet bar, oatmeal, cream of wheat, local fruits, pancakes, scrambled eggs, sausage links, tater tots]
-1/23,2/13,3/5 lunch, [pork pozole, broccoli cheese, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, turkey club wrap, arroz con pollo, fried cheese curds, gyro
-1/23,2/13,3/5 dinner, [pork pozole, broccoli cheese, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, fruit salad, penne w/sausage n' peppers, crisy cauliflowe
+1/23,2/13,3/5 lunch, [turkey rice, tomato basil, salad bar, falafel salad, curry bowl, gardien beef, BBQ pork sandwich, sandwich, chicken pizza, chef's choice, desserts]
+1/23,2/13,3/5 dinner, [turkey rice, tomato basil, salad bar, DIY CA sushi, BBQ chicken, vegan taco bowl, grilled cheese, sandwich, chicken pizza, chef's choice, desserts]
 
 1/24,2/14,3/6 breakfast, [omelet bar, oatmeal, cinnamon rice, local fruits, egg patty muffin, scrambled eggs, bacon, potatoes o' brien]
-1/24,2/14,3/6 lunch, [clam chowder, minestroni, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, DIY California sushi roll, BBQ glazed salmon, c
-1/24,2/14,3/6 dinner, [clam chowder, minestroni, build your own salad/sandwich, cereal, aguas frescas, fresh fruit, build your own waffle, hummus n roasted veggie wrap, fried chicken, ve
+1/24,2/14,3/6 lunch, [clam chowder, veggie noodle, salad bar, chicken salad, teriyaki salmon, edamame rice, fire&ice pasta, sandwiches, veggie, chef's choice, desserts]
+1/24,2/14,3/6 dinner, [clam chowder, veggie noodle, salad bar, italian salad, alfredo pasta, gardein chicken, cajun whitefish, sandwiches, veggie, chef's choice, desserts]
 
 1/26,2/16,3/8 breakfast, [omelet bar, oatmeal, cream of rice, local fruits, french toast, scrambled eggs, sausage link, hash brown triangle]
-1/26,2/16,3/8 lunch, [chicken tortilla, butternut squash, build your own salad/sandwich, cereal, none, fresh fruit, build your own waffle, seasonal fruit smoothie, chicken tamales, cheese & gre
-1/26,2/16,3/8 dinner, [chicken tortilla, butternut squash, build your own salad/sandwich, cereal, none, fresh fruit, build your own waffle, greek salad, spaghetti & meatballs, BRC
-
-
+1/26,2/16,3/8 lunch, [none, none, salad bar, smoothie bar, none, none, none, sandwich, cheese&pepperoni, none, desserts]
+1/26,2/16,3/8 dinner, [potato chowder, chicken noodle, salad bar, nacho bar, lemon chicken, ratatoullie, marinara pasta, sandwich, cheese&pepperoni, none, desserts]
 
 //winter cycle 2
 1/27,2/17,3/9 breakfast, [omelet bar, oatmeal, cream of rice, local fruits, pancakes, scrambled eggs, bacon, cottage fries]
-1/27,2/17,3/9 lunch, [split peaw/ham, tomato bisque, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, spinach salad, beef short ribs, avocado tacos, chicken pesto flatbrea
-1/27,2/17,3/9 dinner, [split peaw/ham, tomato bisque, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, mustard chicken wrap, pork chile verde, stuffed shells, green toma
+1/27,2/17,3/9 lunch, [menudo veggie soup, salad bar, cobb salad, baked ziti, buddha bowl, chicken sandwich, sandwich, chicken empanada, chef's choice, desserts]
+1/27,2/17,3/9 dinner, [menudo veggie soup, salad bar, fattoush salad, beef quesadillas, squash tart, ricotta ravioli, sandwich, chicken empanada, chef's choice, desserts]
 
 1/28,2/18,3/10 breakfast, [omelet bar, oatmeal, grits, local fruits, chilaquiles, scrambled eggs, sausage links, hash browns]
-1/28,2/18,3/10 lunch, [beef&barley, mushroom&brie, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, BBQ chicken wrap, chickencaccatitore, v
-1/28,2/18,3/10 dinner, [beef&barley, mushroom&brie, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chinese chicken salad, shrimp&grits, fried
+1/28,2/18,3/10 lunch, [potato chowder, chicken soup, salad bar, chicken salad, sweet&sour pork, gardein pasta, hot dog bar, sandwich, BBQ chicken, chef's choice, desserts]
+1/28,2/18,3/10 dinner, [potato chowder, chicken soup, salad bar, tortellini salad, chicken parmesan, avocado tacos, filipino pork, sandwich, BBQ chicken, chef's choice, desserts]
 
 1/29,2/19,3/11 breakfast, [omelet bar, oatmeal, sweet rice, local fruits, breakfast burrito, scrambled eggs, pork sausage, country potatoes]
-1/29,2/19,3/11 lunch, [spicy thai chicken, garden veggie, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chicken pesto sandwich, Chipotle pork loin, baked penne
-1/29,2/19,3/11 dinner, [spicy thai chicken, garden veggie, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chicke
+1/29,2/19,3/11 lunch, [lentil soup, chicken noodle, salad bar, quinoa salad, tandoori chicken, white bean stew, alfredo pasta, sandwich, chicken pesto, chef's choice, desserts]
+1/29,2/19,3/11 dinner, [lentil soup, chicken noodle, salad bar, avocado sandwich, chicken pepper, kale veggie stew, chipotle pasta, sandwich, chicken pesto, chef's choice, desserts]
 
 1/30,2/20,3/12 breakfast, [omelet bar, oatmeal, cream of wheat, local fruits, biscuits&gravy, scrambled eggs, sausage patties, tater tots]
-1/30,2/20,3/12 lunch, [chicken pozole, mediterranean lentil, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, green goddess wrap, swedish meatba
-1/30,2/20,3/12 dinner, [chicken pozole, broccoli cheese, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, cobb salad, grilled
+1/30,2/20,3/12 lunch, [tomato basil, sausage&kale soup, salad bar, DIY CA roll, beef sliders, gardein chicken, grilled cheese, sandwich, ricotta flatbread, chef's choice, desserts]
+1/30,2/20,3/12 dinner, [tomato basil, sausage&kale soup, salad bar, quinoa salad, mac&cheese, cauliflower tacos, curry bowl, sandwich, ricotta flatbread, chef's choice, desserts]
 
 1/31,2/21,3/13 breakfast, [omelet bar, oatmeal, cinnamon rice, local fruits, croissant sandwich, scrambled eggs, bacon, potatoes o' brien]
-1/31,2/21,3/13 lunch, [clam chowder, tomato floren, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, lox&bagels, truffle salmon, udon noodle bowl, hot link sa
-1/31,2/21,3/13 dinner, [clam chowder, tomato floren, DIY salad/sandwich, cereal, aguas frescas, fresh fruit, DIY waffle, chicken wrap, lomo saltado, eggplant ratatou, chicken wings,
+1/31,2/21,3/13 lunch, [minestrone, clam chowder, salad bar, cucumber salad, cajun whitefish, kung pao tofu, italian sub, sandwich, veggie, chef's choice, desserts]
+1/31,2/21,3/13 dinner, [minestrone, clam chowder, salad bar, caesar salad, breakfast, ratatouille, fish tacos, sandwich, veggie, chef's choice, desserts]
 
 2/2,2/23,3/15 breakfast, [omelet bar, oatmeal, cream of rice, local fruits, pancakes, scrambled eggs, sausage patty, hash brown patty]
-2/2,2/23,3/15 lunch, [chicken wild rice, cream of broccoli, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, fruit smoothie, chicken alfredo, cheese ravioli, build your own
-2/2,2/23,3/15 dinner, [chicken wild rice, cream of broccoli, DIY salad/sandwich, cereal, none, fresh fruit, DIY waffle, baby kale salad, chicken pot pie, mole tatert bowl,
+2/2,2/23,3/15 lunch, [none, none, smoothie bar, none, none, none, none, none, pepperoni&cheese, chef's choice, desserts]
+2/2,2/23,3/15 dinner, [beef&rice, veggie noodle, salad bar, mandarin salad, chicken tenders, gardein beef, fried rice/shrimp, sandwich, cheese&pepperoni, chef's choice, desserts]
+
+
+
+//Breakfastdone
+//TODO finish lunch and dinner menus
 
 //winter cycle 3
 2/3,2/24,3/16 breakfast, [omelet bar, oatmeal, cream of rice, local fruits, french toast, scrambled eggs, kielbasa sausage, cottage fries]
