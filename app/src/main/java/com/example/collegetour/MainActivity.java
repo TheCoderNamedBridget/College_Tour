@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     String hillsideDiningStationsLunchAndDinner = "Soup 1:\r\nSoup 2:\r\nSalad & Deli:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nAction Station:\r\nMain Entree:\r\nVeggie option:\r\nGrill Station:\r\nStir Fry:\r\nGrain Bowl:\r\nDessert:";
 
     String parksideDiningStationsBreakfast = "Breakfast Bar:";
-    String parksideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nAction Station:\r\nMain Dish:\r\nVeggie/Vegan:\r\nGrill:\r\nGrill:\r\nDeli:\r\nPizza:\r\nChef Table:\r\nSweets:";
+    String parksideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nAction Station:\r\nMain Dish:\r\nVeggie/Vegan:\r\nGrill:\r\nDeli:\r\nPizza:\r\nChef Table:\r\nSweets:";
 
     String beachsideDiningStationsBreakfast = "Hot Cereal:\r\nHome:\r\nHome:\r\nHome:\r\nHome:";
     String beachsideDiningStationsLunchAndDinner = "Soups 1:\r\nSoups 2:\r\nSalad Bar:\r\nDeli(entree):\r\nAt Home:\r\nThe Bar:\r\nGrill:\r\nDeli:\r\nPizza:\r\nSweets:";
