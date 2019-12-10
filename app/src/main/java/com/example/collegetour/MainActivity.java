@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
 
+    //TODO: finish recycler view scroll
+//    @Override
+//    public void onItemClick(View v, int pos){
+//        mylistView.scrollTo(0, v.getTop());
+//    }
 
     //Runs and show different screens
     public void onClick(View v) {
