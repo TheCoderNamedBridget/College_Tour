@@ -66,10 +66,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //TODO: finish recycler view scroll
-//    @Override
-//    public void onItemClick(View v, int pos){
-//        mylistView.scrollTo(0, v.getTop());
-//    }
+//write practice staff directory
+    //create list that is sorted by department then alphabetically
+    //list order will match the recycer view order
+
+    public void onItemClick(View v, int pos){
+        //linearLayoutManager.scrollToPositionWithOffset(2, 20);
+    }
 
     //Runs and show different screens
     public void onClick(View v) {
