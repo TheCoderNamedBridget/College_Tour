@@ -295,6 +295,42 @@ public class MainActivity extends AppCompatActivity {
             case R.id.JG:
                 onPop("JG");
                 break;
+            case R.id.BH:
+                onPop("BH");
+                break;
+            case R.id.LAH:
+                onPop("LAH");
+                break;
+            case R.id.NUR:
+                onPop("NUR");
+                break;
+            case R.id.FCS:
+                onPop("FCS");
+                break;
+            case R.id.SOR:
+                onPop("SOR");
+                break;
+            case R.id.IH:
+                onPop("IH");
+                break;
+            case R.id.SHS:
+                onPop("SHS");
+                break;
+            case R.id.CBA:
+                onPop("CBA");
+                break;
+            case R.id.LCH:
+                onPop("LCH");
+                break;
+            case R.id.PTS:
+                onPop("PTS");
+                break;
+            case R.id.SRWC:
+                onPop("SRWC");
+                break;
+            case R.id.DESN:
+                onPop("DESN");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
@@ -408,11 +444,11 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("HOURS")){
-                    hours = value.substring(7);
+                    hours = "\r\n" + value.substring(7);
                     System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("DESCRIPTION")){
-                    description = value;
+                    description = "\r\n" + value;
 
                 }
 //                System.out.println("WHY ");
