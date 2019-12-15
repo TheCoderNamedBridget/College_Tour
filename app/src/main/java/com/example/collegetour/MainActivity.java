@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activty_upper_campus);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -387,6 +387,24 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.CP:
                 onPop("CP");
+                break;
+            case R.id.CAFE:
+                onPop("CAFE");
+                break;
+            case R.id.BKS:
+                onPop("BKS");
+                break;
+            case R.id.MLSC:
+                onPop("MLSC");
+                break;
+            case R.id.LIB:
+                onPop("LIB");
+                break;
+            case R.id.FO3:
+                onPop("FO3");
+                break;
+            case R.id.PSY:
+                onPop("PSY");
                 break;
             case R.id.searchForBuilding:
                 searchForBuilding();
