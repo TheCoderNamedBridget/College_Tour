@@ -11,6 +11,36 @@
         android:background="@android:color/background_light">
 
         <Button
+            android:id="@+id/searchForStaff"
+            android:layout_width="70sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="250dp"
+            android:onClick="onClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="go" />
+
+        <EditText
+            android:id="@+id/searchBarText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="7dp"
+            android:text="search bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/backToMainMap"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
             android:id="@+id/toMainActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -18,7 +48,7 @@
             android:text="Back to Home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -55,15 +85,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvContacts"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="300dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
