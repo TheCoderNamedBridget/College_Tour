@@ -382,6 +382,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.ET2:
                 onPop("ET");
                 break;
+            case R.id.USU:
+                onPop("USU");
+                break;
+            case R.id.CP:
+                onPop("CP");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
