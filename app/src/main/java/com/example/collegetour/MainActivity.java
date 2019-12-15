@@ -349,6 +349,39 @@ public class MainActivity extends AppCompatActivity {
             case R.id.EN2:
                 onPop("EN2");
                 break;
+            case R.id.EN3:
+                onPop("EN3");
+                break;
+            case R.id.EN4:
+                onPop("EN4");
+                break;
+            case R.id.ECS:
+                onPop("ECS");
+                break;
+            case R.id.MS:
+                onPop("MS");
+                break;
+            case R.id.REC:
+                onPop("REC");
+                break;
+            case R.id.FM:
+                onPop("FM");
+                break;
+            case R.id.CORP:
+                onPop("CORP");
+                break;
+            case R.id.UP:
+                onPop("UP");
+                break;
+            case R.id.REPR:
+                onPop("REPR");
+                break;
+            case R.id.ET1:
+                onPop("ET");
+                break;
+            case R.id.ET2:
+                onPop("ET");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
