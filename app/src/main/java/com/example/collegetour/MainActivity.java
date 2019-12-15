@@ -406,6 +406,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.PSY:
                 onPop("PSY");
                 break;
+            case R.id.AS:
+                onPop("AS");
+                break;
+            case R.id.MMC:
+                onPop("MMC");
+                break;
+            case R.id.ED1:
+                onPop("ED1");
+                break;
+            case R.id.ED2:
+                onPop("ED2");
+                break;
+            case R.id.ANNEX:
+                onPop("ANNEX");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
