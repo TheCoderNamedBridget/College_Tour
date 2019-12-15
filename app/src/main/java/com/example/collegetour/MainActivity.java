@@ -331,6 +331,24 @@ public class MainActivity extends AppCompatActivity {
             case R.id.DESN:
                 onPop("DESN");
                 break;
+            case R.id.FND:
+                onPop("FND");
+                break;
+            case R.id.SSPA:
+                onPop("SSPA");
+                break;
+            case R.id.OP:
+                onPop("OP");
+                break;
+            case R.id.HSD:
+                onPop("HSD");
+                break;
+            case R.id.VEC:
+                onPop("VEC");
+                break;
+            case R.id.EN2:
+                onPop("EN2");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
