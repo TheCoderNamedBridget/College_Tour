@@ -400,8 +400,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.LIB:
                 onPop("LIB");
                 break;
+            case R.id.FO2:
+                onPop("FO2");
+                break;
             case R.id.FO3:
                 onPop("FO3");
+                break;
+            case R.id.FO4:
+                onPop("FO4");
+                break;
+            case R.id.FO5:
+                onPop("FO5");
                 break;
             case R.id.PSY:
                 onPop("PSY");
@@ -420,6 +429,54 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.ANNEX:
                 onPop("ANNEX");
+                break;
+            case R.id.MIC:
+                onPop("MIC");
+                break;
+            case R.id.PH2:
+                onPop("PH2");
+                break;
+            case R.id.PH1:
+                onPop("PH1");
+                break;
+            case R.id.LH:
+                onPop("LH");
+                break;
+            case R.id.MHB:
+                onPop("MHB");
+                break;
+            case R.id.KKJZ:
+                onPop("KKJZ");
+                break;
+            case R.id.LA5:
+                onPop("LA5");
+                break;
+            case R.id.LA4:
+                onPop("LA4");
+                break;
+            case R.id.LA3:
+                onPop("LA3");
+                break;
+            case R.id.LA2:
+                onPop("LA2");
+                break;
+            case R.id.LA1:
+                onPop("LA1");
+                break;
+            case R.id.BA:
+                onPop("BA");
+                break;
+            case R.id.FA4:
+                onPop("FA4");
+                break;
+            case R.id.FA3:
+                onPop("FA3");
+                break;
+            case R.id.FA2:
+                onPop("FA3");
+                break;
+            case R.id.FA1:
+                onPop("FA3");
                 break;
             case R.id.searchForBuilding:
                 searchForBuilding();
