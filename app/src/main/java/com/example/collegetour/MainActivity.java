@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activty_upper_campus);
+        setContentView(R.layout.activity_upper_campus);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_engineering_police_gym);
                 break;
             case R.id.upperCampusMainMapButton:// handle button A click;
-                setContentView(R.layout.activty_upper_campus);
+                setContentView(R.layout.activity_upper_campus);
                 break;
             case R.id.toLowerCampusFromGym:// handle button A click;
                 setContentView(R.layout.activity_lower_campus);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_lower_campus);
                 break;
             case R.id.toUpperCampusFromLowerCampus:// handle button A click;
-                setContentView(R.layout.activty_upper_campus);
+                setContentView(R.layout.activity_upper_campus);
                 break;
             case R.id.toDormsFromLowerCampus:// handle button A click;
                 setContentView(R.layout.activity_dorms);
@@ -478,6 +478,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.FA1:
                 onPop("FA3");
                 break;
+            case R.id.UTC:
+                onPop("UTC");
+                break;
+            case R.id.UT:
+                onPop("UT");
+                break;
+            case R.id.HSCI:
+                onPop("HSCI");
+                break;
+            case R.id.LAB:
+                onPop("LAB");
+                break;
+            case R.id.STTA:
+                onPop("STTA");
+                break;
             case R.id.searchForBuilding:
                 searchForBuilding();
                 break;
@@ -497,9 +512,12 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < buildings.size(); i++){
             if (buildings.get(i).getName().equals(nameOfBuilding)){
-                Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+                for (int f = 0; f < 4; f++){
+                    Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                    
+                }
             }
         }
 
