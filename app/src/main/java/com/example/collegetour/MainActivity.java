@@ -13,6 +13,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +31,6 @@ import java.util.ArrayList;
    Figure out how to set up merchant account
 */
 
-//data entry of all the meals for parkside
 //make search bar more intuitive
 //For back to main map highlight current area of map and resize map so that whole map shows
 //Hard code staff directory first then later try to make it work with school website
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upper_campus);
+        setContentView(R.layout.activity_main);
 
         readBuildingFileAddBuildingToList(); // Figure out why this breaks code and come up with a better way to parse file
     }
@@ -506,7 +507,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Shows pop up when a building is clicked
-    //TODO: FIGURE OU HOW TO DO POP UPS
     //TODO: FINISH HARD CODING BUILDING INFO
     public void onPop (String nameOfBuilding){
 
@@ -516,7 +516,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
-                    
                 }
             }
         }
@@ -644,18 +643,28 @@ public class MainActivity extends AppCompatActivity {
     //TODO: Figure out how to highlight building buttons that have keywords in the description
     public void searchForBuilding (){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
         EditText input = findViewById(R.id.searchBarText);
-
+        if (buildingsWithKeywords.size() != 0){
+            for (int j = 0; j < buildingsWithKeywords.size(); j ++){
+                int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
+                ImageButton But = findViewById(resID);
+                But.setColorFilter(null);
+            }
+        }
         buildingsWithKeywords.clear();
         String keyword = input.getText().toString().toLowerCase();
+        if (keyword.equals("")){
+            return;
+        }
         System.out.println("FOUND " + keyword);
         AssetManager assetManager = getAssets();
         InputStream inputStream = null;
         try {
             inputStream = assetManager.open("Building Info");
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
-
+            System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
             while (s.hasNext()){
                 String value = s.nextLine();
+                System.out.println("FOUNDAValue "+ keyword + " " + value);
                 if (value.contains("ISBUILDING")){
                     curBuilding = value.substring(11);
                 } else if (value.contains(keyword)){
@@ -663,6 +672,29 @@ public class MainActivity extends AppCompatActivity {
                         buildingsWithKeywords.add(new Building(curBuilding));
                         System.out.println("FOUNDASKEW " + curBuilding);
                     }
+                }
+            }
+            System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
+            if (buildingsWithKeywords.size() == 0){
+                Toast toast = Toast.makeText(MainActivity.this, "No Results Found :(", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            } else if (buildingsWithKeywords.size() != 0){
+                if (buildingsWithKeywords.size() == 1){
+                    Toast toast = Toast.makeText(MainActivity.this, "1 Result Found", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                } else if (buildingsWithKeywords.size() != 1){
+                    Toast toast = Toast.makeText(MainActivity.this, buildingsWithKeywords.size() + " Results Found", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+
+                for (int j = 0; j < buildingsWithKeywords.size(); j ++){
+
+                    int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
+                    ImageButton But = findViewById(resID);
+                    But.setColorFilter(Color.argb(255, 255, 0, 0));
                 }
             }
             System.out.println("FOUND " + buildingsWithKeywords.size());
