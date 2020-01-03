@@ -31,12 +31,13 @@ import java.util.ArrayList;
    Figure out how to set up merchant account
 */
 
+//TODO: Publish version with dining hall menus working and coming soon disclaimers for the other 2 sections
+
+
 //make search bar more intuitive
 //For back to main map highlight current area of map and resize map so that whole map shows
 //Hard code staff directory first then later try to make it work with school website
 
-//make set preferences screen work
-//make user homepage more usable, user can choose
 
 public class MainActivity extends AppCompatActivity {
 
