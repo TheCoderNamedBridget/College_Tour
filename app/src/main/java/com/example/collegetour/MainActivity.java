@@ -1,9 +1,11 @@
 package com.example.collegetour;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Build;
@@ -513,11 +515,23 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < buildings.size(); i++){
             if (buildings.get(i).getName().equals(nameOfBuilding)){
-                for (int f = 0; f < 4; f++){
-                    Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
-                }
+
+                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialog.setTitle(buildings.get(i).getName());
+                alertDialog.setMessage("Hours: " + buildings.get(i).getHours() + " " + buildings.get(i).getDescription());
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+
+//                for (int f = 0; f < 4; f++){
+//                    Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
+//                    toast.setGravity(Gravity.CENTER, 0, 0);
+//                    toast.show();
+//                }
             }
         }
 
