@@ -510,7 +510,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Shows pop up when a building is clicked
-    //TODO: FINISH HARD CODING BUILDING INFO
     public void onPop (String nameOfBuilding){
 
         for (int i = 0; i < buildings.size(); i++){
@@ -526,12 +525,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                 alertDialog.show();
-
-//                for (int f = 0; f < 4; f++){
-//                    Toast toast = Toast.makeText(MainActivity.this, buildings.get(i).getName() + buildings.get(i).getHours() + buildings.get(i).getDescription(), Toast.LENGTH_SHORT);
-//                    toast.setGravity(Gravity.CENTER, 0, 0);
-//                    toast.show();
-//                }
             }
         }
 
@@ -567,9 +560,10 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("WHY ");
             while (s.hasNext() && menuOfCurMeal.equals("")){
                 String value = s.nextLine();
-                System.out.println("WHY " + value);
-                if (value.contains(curMeal) && value.contains("3/2")){//&& value.contains(getCurrentTimeUsingDate())
-                    value = value.substring(14);
+                System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
+                if (value.contains(curMeal) && value.contains(getCurrentTimeUsingDate())){
+                    System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
+                    value = value.substring(18);
                     value = value.replace(",", "\r\n");
                     value = value.replace("[", "");
                     value = value.replace("]", "");
@@ -599,7 +593,13 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             System.out.println(dtf.format(localDate));
         }
-        return localDate.toString();
+
+        System.out.println("LOOOKKHERE " + dtf.format(localDate));
+        String theDate = "";
+        if (dtf.format(localDate).substring(0,1).equals("0")){
+            theDate = dtf.format(localDate).substring(1);
+        }
+        return theDate;
     }
 
 
