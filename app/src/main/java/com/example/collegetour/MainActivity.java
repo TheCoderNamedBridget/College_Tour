@@ -50,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Building> buildingsWithKeywords = new ArrayList<>(20);
 
     String curBuilding = "";//so when using search it can just look for key words in the file under each building and return the building or buildings with keywords
-
+    String curScreen = "";//mainmap, lowercampus, uppercampus, police, dorms
+    String curCampusArea = "";
+    String campusAreaWithKeyword = "";
+    Boolean searchedInThisArea = false;
+    String areaLastIn = "";
     String userSearchInput = "";
 
     String hillsideDiningStationsBreakfast = "Omelet Bar:\r\nHot Cereal 1:\r\nHot Cereal 2:\r\nCereal Bar:\r\nBeverage Bar:\r\nFruit Cart:\r\nWaffle Bar:\r\nBfast Special:\r\nEggs:\r\nHot Side 1:\r\nHot Side 2:\r\nPotatoes:\r\nVegan:\r\n" ;
@@ -81,46 +85,72 @@ public class MainActivity extends AppCompatActivity {
     //Runs and show different screens
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.dormImageMainMapButton:// handle button A click;
+            case R.id.dormImageMainMapButton:
+                curScreen = "dorms";
                 setContentView(R.layout.activity_dorms);
+
                 break;
-            case R.id.lowerCampusMainMapButton:// handle button B click;
+            case R.id.lowerCampusMainMapButton:
+                curScreen = "lowercampus";
                 setContentView(R.layout.activity_lower_campus);
+
                 break;
-            case R.id.gymPoliceMainMapButton:// handle button A click;
+            case R.id.gymPoliceMainMapButton:
+                curScreen = "police";
                 setContentView(R.layout.activity_engineering_police_gym);
+
                 break;
-            case R.id.upperCampusMainMapButton:// handle button A click;
+            case R.id.upperCampusMainMapButton:
+                curScreen = "uppercampus";
                 setContentView(R.layout.activity_upper_campus);
+
                 break;
-            case R.id.toLowerCampusFromGym:// handle button A click;
+            case R.id.toLowerCampusFromGym:
+                curScreen = "lowercampus";
                 setContentView(R.layout.activity_lower_campus);
+
                 break;
-            case R.id.toLowerCampusFromUpperCampus:// handle button A click;
+            case R.id.toLowerCampusFromUpperCampus:
+                curScreen = "lowercampus";
                 setContentView(R.layout.activity_lower_campus);
+
                 break;
-            case R.id.toLowerCampusFromDorms:// handle button A click;
+            case R.id.toLowerCampusFromDorms:
+                curScreen = "lowercampus";
                 setContentView(R.layout.activity_lower_campus);
+
                 break;
-            case R.id.toUpperCampusFromLowerCampus:// handle button A click;
+            case R.id.toUpperCampusFromLowerCampus:
+                curScreen = "uppercampus";
                 setContentView(R.layout.activity_upper_campus);
+
                 break;
-            case R.id.toDormsFromLowerCampus:// handle button A click;
+            case R.id.toDormsFromLowerCampus:
+                curScreen = "dorms";
                 setContentView(R.layout.activity_dorms);
+
                 break;
-            case R.id.toGymFromLowerCampus:// handle button A click;
+            case R.id.toGymFromLowerCampus:
+                curScreen = "police";
                 setContentView(R.layout.activity_engineering_police_gym);
+
                 break;
-            case R.id.backToMainMap:// handle button A click;
+            case R.id.backToMainMap:
+                curScreen = "mainmap";
                 setContentView(R.layout.activity_main_map);
+
                 break;
-            case R.id.toDiningMenus:// handle button A click;
+            case R.id.toDiningMenus:
+                curScreen = "dining";
                 setContentView(R.layout.activity_menu_dropdowns);
+
                 break;
-            case R.id.toMainActivity:// handle button A click;
+            case R.id.toMainActivity:
+                curScreen = "main";
                 setContentView(R.layout.activity_main);
+
                 break;
-            case R.id.toStaffDirectory:// handle button A click;
+            case R.id.toStaffDirectory:
                 setContentView(R.layout.activity_staff_directory);
                 // Lookup the recyclerview in activity layout
                 RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
@@ -134,10 +164,10 @@ public class MainActivity extends AppCompatActivity {
                 rvContacts.setLayoutManager(new LinearLayoutManager(this));
                 // That's all!
                 break;
-            case R.id.settingsGear:// handle button A click;
+            case R.id.settingsGear:
                 setContentView(R.layout.activity_settings);
                 break;
-            case R.id.beachsideDining:// handle button A click;
+            case R.id.beachsideDining:
                 curDiningHall = "Beachside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet = findViewById(R.id.beachsideDining);
@@ -655,17 +685,33 @@ public class MainActivity extends AppCompatActivity {
     //parse building file
     //find buildings with description or tags containing keywords
     //return buildings with keyword highlighted
-    //TODO: Figure out how to highlight building buttons that have keywords in the description
+    //COME
     public void searchForBuilding (){//curScreen == lower campus then check the lower campus file if doesn't find anything then ask if they to want to chekc whole campus
         EditText input = findViewById(R.id.searchBarText);
-        if (buildingsWithKeywords.size() != 0){
-            for (int j = 0; j < buildingsWithKeywords.size(); j ++){
-                int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
-                ImageButton But = findViewById(resID);
-                But.setColorFilter(null);
+
+        if (!areaLastIn.equals(curScreen)){
+            areaLastIn = curScreen;
+            buildingsWithKeywords.clear();
+            System.out.println("LASTAREATHHHHERE " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
+        } else if (areaLastIn.equals(curScreen) && !curScreen.equals("mainmap") ){
+            System.out.println("LASTAREAHEREONTOPOFCONDITIOAL " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
+            if (buildingsWithKeywords.size() != 0){
+                System.out.println("LASTAREAHEREONLOOP" +  areaLastIn + " Building list size " + buildingsWithKeywords.size());
+                for (int j = 0; j < buildingsWithKeywords.size(); j ++){
+                    int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
+                    ImageButton But = findViewById(resID);
+                    But.setColorFilter(null);
+                }
+                buildingsWithKeywords.clear();
             }
+
+            System.out.println("LASTAREAHERE " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
+        } else if (areaLastIn.equals("mainmap")){
+            buildingsWithKeywords.clear();
+
         }
-        buildingsWithKeywords.clear();
+        System.out.println("LASTAREA " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
+
         String keyword = input.getText().toString().toLowerCase();
         if (keyword.equals("")){
             return;
@@ -674,7 +720,18 @@ public class MainActivity extends AppCompatActivity {
         AssetManager assetManager = getAssets();
         InputStream inputStream = null;
         try {
-            inputStream = assetManager.open("Building Info");
+            if (curScreen.equals("dorms")){
+                inputStream = assetManager.open("Dorm Buildings");
+            } else if (curScreen.equals("police")){
+                inputStream = assetManager.open("Gym Police Engineering Buildings");
+            } else if (curScreen.equals("lowercampus")){
+                inputStream = assetManager.open("Lower Campus Buildings");
+            } else if (curScreen.equals("uppercampus")){
+                inputStream = assetManager.open("Upper Campus Buildings");
+            } else if (curScreen.equals("mainmap")){
+                inputStream = assetManager.open("Building Info");
+            }
+            //inputStream = assetManager.open("Building Info");
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
             System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
             while (s.hasNext()){
@@ -687,19 +744,22 @@ public class MainActivity extends AppCompatActivity {
                         buildingsWithKeywords.add(new Building(curBuilding));
                         System.out.println("FOUNDASKEW " + curBuilding);
                     }
+                } else if (value.contains("CAMPUSAREA") && buildingsWithKeywords.size() == 0){
+                    curCampusArea = value.substring(11);
+                    campusAreaWithKeyword = curCampusArea;
                 }
             }
             System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
-            if (buildingsWithKeywords.size() == 0){
+            if (buildingsWithKeywords.size() == 0 && !curScreen.equals("mainmap")){
                 Toast toast = Toast.makeText(MainActivity.this, "No Results Found :(", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
-            } else if (buildingsWithKeywords.size() != 0){
+            } else if (buildingsWithKeywords.size() != 0 && !curScreen.equals("mainmap")){
                 if (buildingsWithKeywords.size() == 1){
                     Toast toast = Toast.makeText(MainActivity.this, "1 Result Found", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
-                } else if (buildingsWithKeywords.size() != 1){
+                } else if (buildingsWithKeywords.size() != 1 ){
                     Toast toast = Toast.makeText(MainActivity.this, buildingsWithKeywords.size() + " Results Found", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
@@ -710,13 +770,19 @@ public class MainActivity extends AppCompatActivity {
                     int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
                     ImageButton But = findViewById(resID);
                     But.setColorFilter(Color.argb(255, 255, 0, 0));
+
+
                 }
             }
             System.out.println("FOUND " + buildingsWithKeywords.size());
             for (int i = 0;i < buildingsWithKeywords.size();i++){
                 System.out.println("FOUNDinloop " + buildingsWithKeywords.get(i).getName());
             }
-
+            if (curScreen.equals("mainmap") && !campusAreaWithKeyword.equals("")){
+                Toast toast = Toast.makeText(MainActivity.this, " Results Found in " + campusAreaWithKeyword, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
             System.out.println("DONE");
         }
         catch (IOException e){
