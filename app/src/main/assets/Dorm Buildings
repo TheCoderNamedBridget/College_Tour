@@ -87,15 +87,21 @@ music stuff?)
 
 ISBUILDING CBA
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+DESCRIPTION: [College of Business]
 
-music stuff?)
+college of business, business, )
 
 ISBUILDING LCH
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS 24/7
+DESCRIPTION: [Los Cerritos Hall dorm building]
 
-music stuff?)
+domrs)
+
+ISBUILDING LAH
+(HOURS 24/7
+DESCRIPTION: [Los Alamitos Hall dorm building]
+
+dorms)
 
 ISBUILDING PTS
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
