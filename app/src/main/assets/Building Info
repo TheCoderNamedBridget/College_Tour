@@ -285,35 +285,37 @@ locker lockers basketball rock climbing rock wall court courts)
 
 CAMPUSAREA Upper Campus
 
-ISBUILDING USU
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+CAMPUSAREA Upper Campus
 
-music stuff?)
+ISBUILDING USU
+(HOURS Sunday: Closed Mon-Sat: 7am-12am
+DESCRIPTION: [Big awesome building filled with awesome stuff]
+
+usu, free tampons, free, free pads, free feminine hygiene products, body fat testing, ping pong, tv, relax, hangout, good place to hangout)
 
 ISBUILDING CP
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [Central plant]
 
-music stuff?)
+central plant, cp)
 
 ISBUILDING CAFE
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+DESCRIPTION: [The cafe has multiple dining options: The Chartroom, OPA! Greek Dining, Hibachi Japanese Grill, The Nugget Grill & Pub, Beach Walk, Starbucks]
 
-music stuff?)
+cafe, chartroom, opa!, opa, greek, greek dining, hibachi, japanese grill, grill, hibachi japanese grill, nugget, the nugget, the nugget grill and pub, pub, beach walk, starbucks)
 
 ISBUILDING BKS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS Sun: Closed Sat: 8am-4pm Mon-Fri: 8am-7pm
+DESCRIPTION: [Everything you need from textbooks to scantrons. Get your CSULB swag. Other items of interest: notebooks, flash drives, clothes, stickers, pens, guitars(2nd floor). There is also a convenience store on the left side of the building.]
 
-music stuff?)
+bks, bookstore, books, notebooks, pens, sale, clothes, merch, csulb gifts, flash drive, flash drives, shirts, shirt, sweatpants, hat, hats, socks, backpack, backpacks)
 
 ISBUILDING MLSC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+DESCRIPTION: [Molecular & Life Science Center]
 
-music stuff?)
+mlsc, molecular & life sciences center, molecular & life science)
 
 ISBUILDING LIB
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
@@ -506,7 +508,6 @@ ISBUILDING STTA
 DESCRIPTION: [Printer on 205,316,411]
 
 music stuff?)
-
 
 ED2
 EED
