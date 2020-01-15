@@ -5,14 +5,7 @@ Name
 Hours
 Description
 
-ISBUILDING SRWC
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Gym with treadmills, ellipticals, stationary bikes, lifting machines, squat racks, basketball courts, indoor track, rock wall, pickle ball court, volleyball court, outdoor sand volleyball court and outdoor pool/hot tub. There are also rentals for bikes, surfing, climbing and camping gear.This building is wheel chair accessible]
 
-gym treadmill treadmills elliptical ellipticals stair climber stationary bike stationary bikes
-indoor track free weights squat rack yoga yoga studio body fat percentage test scale pool hot tub
-stretching mats racquet ball punching bag elevator wheelchair accessible showers locker room locker room
-locker lockers basketball rock climbing rock wall court courts)
 
 
 CAMPUSAREA Lower Campus
@@ -27,49 +20,49 @@ sports events)
 
 ISBUILDING CPAC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING DC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING UMC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING BAC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING KIN
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING HC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING UAM
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
 ISBUILDING HHS1
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+DESCRIPTION: [?????]
 
 music stuff?)
 
@@ -78,6 +71,8 @@ ISBUILDING HHS2
 DESCRIPTION: [Music Department?]
 
 music stuff?)
+
+
 
 CAMPUSAREA Dorms
 
@@ -168,21 +163,30 @@ music stuff?)
 
 ISBUILDING CBA
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+DESCRIPTION: [College of Business]
 
-music stuff?)
+college of business, business, )
 
 ISBUILDING LCH
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS 24/7
+DESCRIPTION: [Los Cerritos Hall dorm building]
 
-music stuff?)
+domrs)
+
+ISBUILDING LAH
+(HOURS 24/7
+DESCRIPTION: [Los Alamitos Hall dorm building]
+
+dorms)
 
 ISBUILDING PTS
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
 DESCRIPTION: [Printer on 205,316,411]
 
 music stuff?)
+
+
+CAMPUSAREA Police/Gym
 
 ISBUILDING DESN
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
@@ -267,6 +271,19 @@ ISBUILDING ET
 DESCRIPTION: [Printer on 205,316,411]
 
 music stuff?)
+
+ISBUILDING SRWC
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Gym with treadmills, ellipticals, stationary bikes, lifting machines, squat racks, basketball courts, indoor track, rock wall, pickle ball court, volleyball court, outdoor sand volleyball court and outdoor pool/hot tub. There are also rentals for bikes, surfing, climbing and camping gear.This building is wheel chair accessible]
+
+gym treadmill treadmills elliptical ellipticals stair climber stationary bike stationary bikes
+indoor track free weights squat rack yoga yoga studio body fat percentage test scale pool hot tub
+stretching mats racquet ball punching bag elevator wheelchair accessible showers locker room locker room
+locker lockers basketball rock climbing rock wall court courts)
+
+
+
+CAMPUSAREA Upper Campus
 
 ISBUILDING USU
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
