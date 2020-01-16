@@ -34,6 +34,7 @@ import java.util.ArrayList;
 */
 
 //TODO: Publish version with dining hall menus working and coming soon disclaimers for the other 2 sections
+//TODO: Make tutorial for the app
 
 
 //make search bar more intuitive
@@ -587,11 +588,30 @@ public class MainActivity extends AppCompatActivity {
         try {
             inputStream = assetManager.open(name);
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
-            System.out.println("WHY ");
+
+            System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
+
+
+            String currentTime = "1/16";
+            System.out.println("whyNEWTIME1 " + currentTime);
+            if (currentTime.length() != 5) {
+                System.out.println("whyNEWTIME2confusion " + currentTime.substring(0,2));
+                if (currentTime.substring(0,2).contains("/")) {
+                    currentTime = "0" + currentTime;
+                    System.out.println("whyNEWTIME2 " + currentTime);
+                }
+                if (currentTime.length() != 5) {
+                    currentTime = currentTime.substring(0,3) + "0" + currentTime.substring(3);
+                    System.out.println("whyNEWTIME3 " + currentTime);
+                }
+            }
+
+            System.out.println("whyNEWTIME " + currentTime);
             while (s.hasNext() && menuOfCurMeal.equals("")){
                 String value = s.nextLine();
-                System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
-                if (value.contains(curMeal) && value.contains(getCurrentTimeUsingDate())){
+
+
+                if (value.contains(curMeal) && value.contains(currentTime)){
                     System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
                     value = value.substring(18);
                     value = value.replace(",", "\r\n");
