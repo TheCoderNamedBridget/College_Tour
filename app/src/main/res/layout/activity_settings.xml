@@ -27,19 +27,57 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="315dp"
-            android:layout_height="231dp"
+            android:layout_width="356dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="200dp"
             android:layout_marginEnd="213dp"
-            android:layout_marginRight="213dp"
             android:layout_marginBottom="585dp"
-            android:text='Settings will display: Account information, changes for vews and what is shown as the first page, can change which colege is being shown in settings, can view "my colleges", in check box view '
+            android:text="Availability on IOS, full CSULB map, shuttle information, free food/daily event updates, staff directory with office hours. "
+            android:textColor="@android:color/background_dark"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="393dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="400dp"
+            android:text="For more information contact: cavemantecholgies@gmail.com"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="For more information contact: cavemantecholgies@gmail.com" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="393dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="150dp"
+            android:text="Coming Soon:"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Coming Soon:" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
