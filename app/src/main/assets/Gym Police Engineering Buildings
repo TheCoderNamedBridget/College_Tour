@@ -1,88 +1,88 @@
 CAMPUSAREA Police/Gym
 
 ISBUILDING DESN
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [desn]
 
-music stuff?)
+desn)
 
 ISBUILDING FND
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [fnd]
 
-music stuff?)
+fnd)
 
 ISBUILDING SSPA
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [sspa]
 
-music stuff?)
+sspa)
 
 ISBUILDING OP
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [op]
 
-music stuff?)
+op)
 
 ISBUILDING HSD
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [hsd]
 
-music stuff?)
+hsd)
 
 ISBUILDING EN3
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [en3]
 
-music stuff?)
+en3)
 
 ISBUILDING EN4
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [en4]
 
-music stuff?)
+en4)
 
 ISBUILDING MS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [ms]
 
-music stuff?)
+ms)
 
 ISBUILDING REC
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [rec]
 
-music stuff?)
+rec)
 
 ISBUILDING FM
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [fm]
 
-music stuff?)
+fm)
 
 ISBUILDING CORP
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [corp]
 
-music stuff?)
+corp)
 
 ISBUILDING UP
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [up]
 
-music stuff?)
+up)
 
 ISBUILDING REPR
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [repr]
 
-music stuff?)
+repr)
 
 ISBUILDING ET
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [et]
 
-music stuff?)
+et)
 
 ISBUILDING SRWC
 (HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
@@ -92,3 +92,21 @@ gym treadmill treadmills elliptical ellipticals stair climber stationary bike st
 indoor track free weights squat rack yoga yoga studio body fat percentage test scale pool hot tub
 stretching mats racquet ball punching bag elevator wheelchair accessible showers locker room locker room
 locker lockers basketball rock climbing rock wall court courts)
+
+ISBUILDING VEC
+(HOURS ???
+DESCRIPTION: [The majority of engineering courses are taught in the Vivian Engineering center. Bathrooms are located at the center of every floor near the elevators. Printers are available in rooms 218,321,420, and 501]
+
+vec, vivian, engineering, center, vivian engineering center, print, printing, printer)
+
+ISBUILDING EN2
+(HOURS ???
+DESCRIPTION: [EN2 contains the Engineering Student Success Center(ESSC) on the 3rd floor. Printers available in rooms 200 and 204]
+
+print, printing, printer, ESSC, Engineering Student Success Center)
+
+ISBUILDING ECS
+(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
+DESCRIPTION: [Staff offices located on floor 5. Printers available in rooms 205,316, and 411]
+
+print, printing, printer, printers, staff, engineering staff)

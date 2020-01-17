@@ -1,110 +1,88 @@
 CAMPUSAREA Dorms
 
 ISBUILDING RC
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+(HOURS ???
+DESCRIPTION: [rc]
 
-music stuff?)
+rc)
 
 ISBUILDING CDC
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+(HOURS ???
+DESCRIPTION: [cdc]
 
-music stuff?)
+cdc)
 
 ISBUILDING HRL
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+(HOURS ???
+DESCRIPTION: [hrl]
 
-music stuff?)
+hrl)
 
 ISBUILDING JG
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Music Department?]
+(HOURS Sun: 12-4pm Sat/Mon: CLOSED Tues-Fri: 9am-4pm
+DESCRIPTION: [The Japanese Garden is a great place to study, feed koi fish(bring quarters), or go on a date. The Japanese Garden is often booked for weddings.]
 
-music stuff?)
-ISBUILDING VEC
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 218,321,420,501]
-
-music stuff?)
-
-ISBUILDING EN2
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 200,204]
-
-music stuff?)
-
-ISBUILDING ECS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
-
-music stuff?)
+jg, japanese, garden, japanese, garden, jap garden, koi, koi fish, fish, date, date spot, study, pond, ducks, wedding, weddings, feed koi fish)
 
 
 ISBUILDING LAH
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS 24/7 for residents
+DESCRIPTION: [Los Alamitos Hall contains a convenience store and vending machine on floor 1.]
 
-music stuff?)
+lah, los alamitos hall)
 
 
 ISBUILDING BH
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [bh]
 
-music stuff?)
+bh)
 
 ISBUILDING NUR
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [nur]
 
-music stuff?)
+nur)
 
 ISBUILDING FCS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [fcs]
 
-music stuff?)
+fcs)
 
 ISBUILDING SOR
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [sor]
 
-music stuff?)
+sor)
 
 ISBUILDING IH
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS 24/7 for residens
+DESCRIPTION: [International Housing is housing for international students]
 
-music stuff?)
+ih, international, international housing)
 
 ISBUILDING SHS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [shs]
 
-music stuff?)
+shs)
 
 ISBUILDING CBA
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [College of Business]
+(HOURS ???
+DESCRIPTION: [College of Business, majority of business courses are held in this building]
 
-college of business, business, )
+college of business, business)
 
 ISBUILDING LCH
 (HOURS 24/7
 DESCRIPTION: [Los Cerritos Hall dorm building]
 
-domrs)
+dorms, los cerritos, los cerritos dorms, dorm)
 
-ISBUILDING LAH
-(HOURS 24/7
-DESCRIPTION: [Los Alamitos Hall dorm building]
-
-dorms)
 
 ISBUILDING PTS
-(HOURS S/S:7AM–6PM M/T/W/T:6AM-12AM F:6AM–9PM
-DESCRIPTION: [Printer on 205,316,411]
+(HOURS ???
+DESCRIPTION: [pts]
 
-music stuff?)
+pts)
