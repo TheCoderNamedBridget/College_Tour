@@ -26,20 +26,15 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-/*TODO: General All make all image backgrounds "light"
+/*
 *  Improve overall UI -> intuitive navigation, obvious symbols(home button), correctly sized buttons and images*/
-
-/*TODO: Urgents:
-   Figure out how to set up merchant account
-*/
 
 //TODO: Publish version with dining hall menus working and coming soon disclaimers for the other 2 sections
 //TODO: Make tutorial for the app
 
 
-//make search bar more intuitive
-//For back to main map highlight current area of map and resize map so that whole map shows
-//Hard code staff directory first then later try to make it work with school website
+//JUST SEND IT
+//CHANGE BUTTONS
 
 
 public class MainActivity extends AppCompatActivity {
@@ -589,30 +584,18 @@ public class MainActivity extends AppCompatActivity {
             inputStream = assetManager.open(name);
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
 
-            System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
-
-
-            String currentTime = "1/16";
-            System.out.println("whyNEWTIME1 " + currentTime);
+            String currentTime = getCurrentTimeUsingDate();
             if (currentTime.length() != 5) {
-                System.out.println("whyNEWTIME2confusion " + currentTime.substring(0,2));
                 if (currentTime.substring(0,2).contains("/")) {
                     currentTime = "0" + currentTime;
-                    System.out.println("whyNEWTIME2 " + currentTime);
                 }
                 if (currentTime.length() != 5) {
                     currentTime = currentTime.substring(0,3) + "0" + currentTime.substring(3);
-                    System.out.println("whyNEWTIME3 " + currentTime);
                 }
             }
-
-            System.out.println("whyNEWTIME " + currentTime);
             while (s.hasNext() && menuOfCurMeal.equals("")){
                 String value = s.nextLine();
-
-
                 if (value.contains(curMeal) && value.contains(currentTime)){
-                    System.out.println("WHYisthishappening " + getCurrentTimeUsingDate());
                     value = value.substring(18);
                     value = value.replace(",", "\r\n");
                     value = value.replace("[", "");
