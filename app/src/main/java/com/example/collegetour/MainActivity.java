@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.res.AssetManager;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,8 @@ import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+import static androidx.core.view.ViewCompat.setBackgroundTintList;
 
 /*
 *  Improve overall UI -> intuitive navigation, obvious symbols(home button), correctly sized buttons and images*/
@@ -151,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 // Lookup the recyclerview in activity layout
                 RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
                 // Initialize contacts
-                contacts = Contact.createContactsList(20);//TODO COME BACK HERE AND READ STAFF NAMES FROM FILE
+                contacts = Contact.createContactsList(20);
                 // Create adapter passing in the sample user data
                 ContactsAdapter adapter = new ContactsAdapter(contacts);
                 // Attach the adapter to the recyclerview to populate items
@@ -167,13 +171,13 @@ public class MainActivity extends AppCompatActivity {
                 curDiningHall = "Beachside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet = findViewById(R.id.beachsideDining);
-                hallToSet.setBackgroundColor(Color.GREEN);
+                hallToSet.setTextColor(Color.BLACK);
 
                 Button hallToSet1 = findViewById(R.id.hillsideDining);
-                hallToSet1.setBackgroundColor(Color.LTGRAY);
+                hallToSet1.setTextColor(Color.LTGRAY);
 
                 Button hallToSet2 = findViewById(R.id.parksideDining);
-                hallToSet2.setBackgroundColor(Color.LTGRAY);
+                hallToSet2.setTextColor(Color.LTGRAY);
 
                 Button breakfastButton3 = findViewById(R.id.breakfastButton);
                 breakfastButton3.setVisibility(View.VISIBLE);
@@ -185,15 +189,17 @@ public class MainActivity extends AppCompatActivity {
                 dinnerButton3.setVisibility(View.VISIBLE);
                 break;
             case R.id.hillsideDining:// handle button A click;
-                System.out.println("HERE " + curDiningHall);
+
                 curDiningHall = "Hillside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet3 = findViewById(R.id.hillsideDining);
-                hallToSet3.setBackgroundColor(Color.GREEN);
+                hallToSet3.setTextColor(Color.BLACK);
+
                 Button hallToSet4 = findViewById(R.id.parksideDining);
-                hallToSet4.setBackgroundColor(Color.LTGRAY);
+                hallToSet4.setTextColor(Color.LTGRAY);
+
                 Button hallToSet5 = findViewById(R.id.beachsideDining);
-                hallToSet5.setBackgroundColor(Color.LTGRAY);
+                hallToSet5.setTextColor(Color.LTGRAY);
 
                 Button breakfastButton1 = findViewById(R.id.breakfastButton);
                 breakfastButton1.setVisibility(View.VISIBLE);
@@ -208,11 +214,13 @@ public class MainActivity extends AppCompatActivity {
                 curDiningHall = "Parkside";
                 setContentView(R.layout.activity_menu_dropdowns);
                 Button hallToSet6 = findViewById(R.id.parksideDining);
-                hallToSet6.setBackgroundColor(Color.GREEN);
+                hallToSet6.setTextColor(Color.BLACK);
+
                 Button hallToSet7 = findViewById(R.id.hillsideDining);
-                hallToSet7.setBackgroundColor(Color.LTGRAY);
+                hallToSet7.setTextColor(Color.LTGRAY);
+
                 Button hallToSet8 = findViewById(R.id.beachsideDining);
-                hallToSet8.setBackgroundColor(Color.LTGRAY);
+                hallToSet8.setTextColor(Color.LTGRAY);
 
                 Button breakfastButton2 = findViewById(R.id.breakfastButton);
                 breakfastButton2.setVisibility(View.VISIBLE);
@@ -236,11 +244,14 @@ public class MainActivity extends AppCompatActivity {
                     changeBreakfastText.setText(beachsideDiningStationsBreakfast);
                 }
                 Button changeBreakfastButton = findViewById(R.id.breakfastButton);
-                changeBreakfastButton.setBackgroundColor(Color.GREEN);
+                changeBreakfastButton.setTextColor(Color.BLACK);
+
                 Button changeLunchButton = findViewById(R.id.lunchButton);
-                changeLunchButton.setBackgroundColor(Color.LTGRAY);
+                changeLunchButton.setTextColor(Color.LTGRAY);
+
                 Button changeDinnerButton = findViewById(R.id.dinnerButton);
-                changeDinnerButton.setBackgroundColor(Color.LTGRAY);
+                changeDinnerButton.setTextColor(Color.LTGRAY);
+
                 changeMenuOptions();
                 break;
             case R.id.lunchButton:// handle button A click;
@@ -256,11 +267,14 @@ public class MainActivity extends AppCompatActivity {
                     changeBreakfastText.setText(beachsideDiningStationsLunchAndDinner);
                 }
                 Button breakfastButton = findViewById(R.id.breakfastButton);
-                breakfastButton.setBackgroundColor(Color.LTGRAY);
+                breakfastButton.setTextColor(Color.LTGRAY);
+
                 Button lunchButton = findViewById(R.id.lunchButton);
-                lunchButton.setBackgroundColor(Color.GREEN);
+                lunchButton.setTextColor(Color.BLACK);
+
                 Button dinnerButton = findViewById(R.id.dinnerButton);
-                dinnerButton.setBackgroundColor(Color.LTGRAY);
+                dinnerButton.setTextColor(Color.LTGRAY);
+
                 changeMenuOptions();
                 break;
             case R.id.dinnerButton:// handle button A click;
@@ -276,11 +290,14 @@ public class MainActivity extends AppCompatActivity {
                     changeBreakfastText.setText(beachsideDiningStationsLunchAndDinner);
                 }
                 Button breakfast = findViewById(R.id.breakfastButton);
-                breakfast.setBackgroundColor(Color.LTGRAY);
+                breakfast.setTextColor(Color.LTGRAY);
+
                 Button lunch = findViewById(R.id.lunchButton);
-                lunch.setBackgroundColor(Color.LTGRAY);
+                lunch.setTextColor(Color.LTGRAY);
+
                 Button dinner = findViewById(R.id.dinnerButton);
-                dinner.setBackgroundColor(Color.GREEN);
+                dinner.setTextColor(Color.BLACK);
+
                 changeMenuOptions();
                 break;
             case R.id.PYR:
@@ -608,7 +625,6 @@ public class MainActivity extends AppCompatActivity {
             Log.e("message: ",e.getMessage());
         }
 
-        System.out.println("PLS " + menuOfCurMeal);
         return menuOfCurMeal;
     }
 
@@ -624,10 +640,8 @@ public class MainActivity extends AppCompatActivity {
             localDate = LocalDate.now();
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            System.out.println(dtf.format(localDate));
         }
 
-        System.out.println("LOOOKKHERE " + dtf.format(localDate));
         String theDate = "";
         if (dtf.format(localDate).substring(0,1).equals("0")){
             theDate = dtf.format(localDate).substring(1);
@@ -653,31 +667,22 @@ public class MainActivity extends AppCompatActivity {
                 String value = s.nextLine();
                 if (value.contains("ISBUILDING")){
                     curBuilding = value.substring(11);
-                    System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("HOURS")){
                     hours = "\r\n" + value.substring(7);
-                    System.out.println("Name: " + curBuilding + " Hours: " + hours + " Description: " + description);
                 }
                 if (value.contains("DESCRIPTION")){
                     description = "\r\n" + value;
 
                 }
-//                System.out.println("WHY ");
-//                System.out.println("WHY " + "[" + curBuilding +"][" + hours +"][" + description+"]");
                 if (!curBuilding.equals("") && !hours.equals("") && !description.equals("")){
                     Building newBuilding = new Building(curBuilding,hours,description);
-//                    System.out.println("Name: 22 " + newBuilding.getName() + " Hours: " + newBuilding.getHours() + " Description: " + newBuilding.getDescription());
                     buildings.add(newBuilding);
-//                    System.out.println("Name: 22 " + buildings.get(0).getName());
-//                    System.out.println("Name: 22 " + buildings.size());
-//                    System.out.println("Name: 22 " + curBuilding + " Hours: " + hours + " Description: " + description);
                     curBuilding = "";
                     hours = "";
                     description = "";
                 }
             }
-            System.out.println("DONE");
         }
         catch (IOException e){
             Log.e("message: ",e.getMessage());
@@ -695,11 +700,8 @@ public class MainActivity extends AppCompatActivity {
         if (!areaLastIn.equals(curScreen)){
             areaLastIn = curScreen;
             buildingsWithKeywords.clear();
-            System.out.println("LASTAREATHHHHERE " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
         } else if (areaLastIn.equals(curScreen) && !curScreen.equals("mainmap") ){
-            System.out.println("LASTAREAHEREONTOPOFCONDITIOAL " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
             if (buildingsWithKeywords.size() != 0){
-                System.out.println("LASTAREAHEREONLOOP" +  areaLastIn + " Building list size " + buildingsWithKeywords.size());
                 for (int j = 0; j < buildingsWithKeywords.size(); j ++){
                     int resID = getResources().getIdentifier(buildingsWithKeywords.get(j).getName(), "id",getPackageName());
                     ImageButton But = findViewById(resID);
@@ -708,18 +710,15 @@ public class MainActivity extends AppCompatActivity {
                 buildingsWithKeywords.clear();
             }
 
-            System.out.println("LASTAREAHERE " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
         } else if (areaLastIn.equals("mainmap")){
             buildingsWithKeywords.clear();
 
         }
-        System.out.println("LASTAREA " + areaLastIn + " Building list size " + buildingsWithKeywords.size());
 
         String keyword = input.getText().toString().toLowerCase();
         if (keyword.equals("")){
             return;
         }
-        System.out.println("FOUND " + keyword);
         AssetManager assetManager = getAssets();
         InputStream inputStream = null;
         try {
@@ -736,23 +735,19 @@ public class MainActivity extends AppCompatActivity {
             }
             //inputStream = assetManager.open("Building Info");
             java.util.Scanner s = new java.util.Scanner(inputStream).useDelimiter("\\A");
-            System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
             while (s.hasNext()){
                 String value = s.nextLine();
-                System.out.println("FOUNDAValue "+ keyword + " " + value);
                 if (value.contains("ISBUILDING")){
                     curBuilding = value.substring(11);
                 } else if (value.contains(keyword)){
                     if (buildingsWithKeywords.size() == 0 || (buildingsWithKeywords.size() != 0 && !(buildingsWithKeywords.get(buildingsWithKeywords.size() -1).getName()).equals(curBuilding))){
                         buildingsWithKeywords.add(new Building(curBuilding));
-                        System.out.println("FOUNDASKEW " + curBuilding);
                     }
                 } else if (value.contains("CAMPUSAREA") && buildingsWithKeywords.size() == 0){
                     curCampusArea = value.substring(11);
                     campusAreaWithKeyword = curCampusArea;
                 }
             }
-            System.out.println("FOUNDBUILDINGSIZE " + buildingsWithKeywords.size());
             if (buildingsWithKeywords.size() == 0 && !curScreen.equals("mainmap")){
                 Toast toast = Toast.makeText(MainActivity.this, "No Results Found :(", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
@@ -777,16 +772,11 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-            System.out.println("FOUND " + buildingsWithKeywords.size());
-            for (int i = 0;i < buildingsWithKeywords.size();i++){
-                System.out.println("FOUNDinloop " + buildingsWithKeywords.get(i).getName());
-            }
             if (curScreen.equals("mainmap") && !campusAreaWithKeyword.equals("")){
                 Toast toast = Toast.makeText(MainActivity.this, " Results Found in " + campusAreaWithKeyword, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
             }
-            System.out.println("DONE");
         }
         catch (IOException e){
             Log.e("message: ",e.getMessage());
@@ -813,5 +803,4 @@ public class MainActivity extends AppCompatActivity {
 //        Date date=cal.getTime();
 //        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 //        String formattedDate=dateFormat.format(date);
-//        System.out.println("Current time of the day using Calendar - 24 hour format: "+ formattedDate);
 //    }
