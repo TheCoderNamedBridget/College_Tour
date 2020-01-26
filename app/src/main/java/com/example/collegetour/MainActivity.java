@@ -797,10 +797,3 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-
-//    public static void getCurrentTimeUsingCalendar() {
-//        Calendar cal = Calendar.getInstance();
-//        Date date=cal.getTime();
-//        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-//        String formattedDate=dateFormat.format(date);
-//    }
